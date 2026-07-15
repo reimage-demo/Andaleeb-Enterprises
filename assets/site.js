@@ -43,6 +43,7 @@ const heroVideoToggle = document.querySelector("[data-hero-video-toggle]");
 if (heroVideo) {
   heroVideo.addEventListener("ended", () => {
     heroVideo.closest(".home-hero")?.classList.add("video-finished");
+    heroVideo.closest(".home-hero")?.querySelector(".hero-content")?.setAttribute("aria-hidden", "false");
     heroVideoToggle?.classList.add("is-paused");
     heroVideoToggle?.setAttribute("aria-label", "Replay hero video");
     heroVideoToggle?.setAttribute("aria-pressed", "true");
@@ -54,6 +55,7 @@ if (heroVideo && heroVideoToggle) {
     if (heroVideo.ended) {
       heroVideo.currentTime = 0;
       heroVideo.closest(".home-hero")?.classList.remove("video-finished");
+      heroVideo.closest(".home-hero")?.querySelector(".hero-content")?.setAttribute("aria-hidden", "true");
     }
     if (heroVideo.paused) {
       heroVideo.play();
