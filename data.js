@@ -64,33 +64,33 @@ const AE = {
   },
   images,
   properties: [
-    ["magnolia-building", "Magnolia Building", "Magnolia Building LLC", "635-651 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "15", 2000000, "100%", "Stabilized"],
-    ["690-albany-avenue", "690 Albany Avenue", "Ahmed Kavita Trustee", "690 Albany Avenue", "Hartford, CT", "Commercial", "3", 500000, "100%", "Stabilized"],
-    ["895-albany-avenue", "895 Albany Avenue", "919 Albany Avenue LLC", "895 Albany Avenue", "Hartford, CT", "Commercial", "1", 35000, "100%", "Stabilized"],
-    ["907-albany-avenue", "907 Albany Avenue", "919 Albany Avenue LLC", "907 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "3", 400000, "100%", "Stabilized"],
-    ["919-albany-avenue", "919 Albany Avenue", "919 Albany Avenue LLC", "919 Albany Avenue", "Hartford, CT", "Commercial", "3", 900000, "100%", "Stabilized"],
-    ["tinker-building", "Tinker Building", "Tinker building LLC", "1136-1150 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "10", 1500000, "100%", "Stabilized"],
-    ["weaver-building", "Weaver Building", "Weaver Building LLC", "1154-1170 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "24", 3000000, "100%", "Stabilized"],
-    ["winton-building", "Winton Building", "Winton building LLC", "45 Wintonbury Avenue", "Bloomfield, CT", "Commercial", "29", 2000000, "100%", "Stabilized"],
-    ["governors-building", "Governor's Building", "Governor's Building LLC", "987-1003 Main Street", "East Hartford, CT", "Commercial", "12", 1400000, "100%", "Stabilized"],
-    ["post-office-building", "Post Office Building", "Post Office Building LLC", "641-651 Maple Avenue", "Hartford, CT", "Commercial", "5", 2000000, "50%", "Stabilized"],
-    ["sullivan-avenue-portfolio", "Sullivan Avenue Portfolio", "Kavita Ahmed Family trust", "942-986 Sullivan Avenue", "South Windsor, CT", "Commercial", "14", 3000000, "100%", "Stabilized"],
-    ["boat-club-building", "Boat Club Building", "Boat Club Building LLC", "1-3 East Main Street", "Clinton, CT", "Commercial", "8", 1000000, "100%", "Stabilized"],
-    ["five-seven-east-main", "5-7 East Main", "Five seven LLC", "5-7 East Main Street", "Clinton, CT", "Commercial", "5", 500000, "100%", "Stabilized"],
-    ["143-edgewood-street", "143 Edgewood Street", "143 Edgewood St LLC", "143 Edgewood Street", "Hartford, CT", "Residential", "3", 450000, "33%", "Stabilized"],
-    ["65-beelzebub-road", "65 Beelzebub Road", "Ahmed Kavita Trustee", "65 Beelzebub Road", "South Windsor, CT", "Residential", "1", 400000, "100%", "Stabilized"],
-    ["20-highland-park", "20 Highland Park", "20 Highland park LLC", "20 Highland Park", "Enfield, CT", "Residential", "1", 300000, "100%", "Stabilized"],
-    ["258-farmington-avenue", "258 Farmington Avenue", "258 Farmington Ave. LLC", "258 Farmington Avenue", "Hartford, CT", "Commercial", "1", 250000, "100%", "Stabilized"],
-    ["455-farmington-avenue", "455 Farmington Avenue", "Check cashing store LLC", "455 Farmington Avenue", "Hartford, CT", "Commercial", "1", 450000, "100%", "Stabilized"],
-    ["affleck-building", "Affleck Building", "Affleck Building LLC", "741-749 Park Street", "Hartford, CT", "Res/Com Multi use", "12", 1400000, "100%", "Stabilized"],
-    ["eternity-building", "Eternity Building", "Eternity Building LLC", "692-700 Park Street", "Hartford, CT", "Res/Com Multi use", "8", 800000, "100%", "Stabilized"],
-    ["uptown-building", "Uptown Building", "Uptown Building LLC", "1468-1470 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "8", 1200000, "100%", "Under renovation"],
-    ["696-714-albany-avenue", "696-714 Albany Avenue", "Andaleeb Enterprises LLC", "696-714 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "11", 1500000, "100%", "Under renovation"],
-    ["restaurant-building", "Restaurant Building", "Restaurant Building LLC", "1113-1115 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "9", 500000, "100%", "Stabilized"],
-    ["terry-square-plaza", "Terry Square Plaza", "Terry Square plaza", "2739 Main Street", "Hartford, CT", "Commercial", "7", 750000, "100%", "Stabilized"],
-    ["merchant-association", "The Merchant Association", "The Merchant Association LLC", "1108 Albany Avenue", "Hartford, CT", "Commercial", "1", 365000, "100%", "Stabilized"],
-    ["885-albany-avenue", "885 Albany Avenue", "885 Albany Avenue LLC", "885 Albany Avenue", "Hartford, CT", "Commercial", "1", 350000, "100%", "Stabilized"],
-    ["ten-mill-pond-lane", "10 Mill Pond Lane", "Ten Mill Pond Lane LLC", "10 Mill Pond Lane", "Simsbury, CT", "Commercial", "TBD", 0, "100%", "Closing in progress"]
+    ["magnolia-building", "635-651 Albany Avenue, Hartford, CT 06112", "Magnolia Building LLC", "635-651 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "15", 2000000, "100%", "Stabilized"],
+    ["690-albany-avenue", "690 Albany Avenue, Hartford, CT 06112", "Ahmed Kavita Trustee", "690 Albany Avenue", "Hartford, CT", "Commercial · Retail Space", "3", 500000, "100%", "Stabilized"],
+    ["895-albany-avenue", "895 Albany Avenue, Hartford, CT 06112", "919 Albany Avenue LLC", "895 Albany Avenue", "Hartford, CT", "Commercial · Retail Space", "1", 35000, "100%", "Stabilized"],
+    ["907-albany-avenue", "907 Albany Avenue, Hartford, CT 06112", "919 Albany Avenue LLC", "907 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "3", 400000, "100%", "Stabilized"],
+    ["919-albany-avenue", "919 Albany Avenue, Hartford, CT 06112", "919 Albany Avenue LLC", "919 Albany Avenue", "Hartford, CT", "Commercial · Retail Space", "3", 900000, "100%", "Stabilized"],
+    ["tinker-building", "1136-1150 Albany Avenue, Hartford, CT 06112", "Tinker building LLC", "1136-1150 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "10", 1500000, "100%", "Stabilized"],
+    ["weaver-building", "1154-1170 Albany Avenue, Hartford, CT 06112", "Weaver Building LLC", "1154-1170 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "24", 3000000, "100%", "Stabilized"],
+    ["winton-building", "45 Wintonbury Avenue, Bloomfield, CT 06002", "Winton building LLC", "45 Wintonbury Avenue", "Bloomfield, CT", "Commercial · Retail Space", "29", 2000000, "100%", "Stabilized"],
+    ["governors-building", "987-1003 Main Street, East Hartford, CT 06108", "Governor's Building LLC", "987-1003 Main Street", "East Hartford, CT", "Commercial · Retail Space", "12", 1400000, "100%", "Stabilized"],
+    ["post-office-building", "641-651 Maple Avenue, Hartford, CT 06114", "Post Office Building LLC", "641-651 Maple Avenue", "Hartford, CT", "Commercial · Retail Space", "5", 2000000, "50%", "Stabilized"],
+    ["sullivan-avenue-portfolio", "942-986 Sullivan Avenue, South Windsor, CT 06074", "Kavita Ahmed Family trust", "942-986 Sullivan Avenue", "South Windsor, CT", "Commercial · Retail Space", "14", 3000000, "100%", "Stabilized"],
+    ["boat-club-building", "1-3 East Main Street, Clinton, CT 06413", "Boat Club Building LLC", "1-3 East Main Street", "Clinton, CT", "Commercial · Retail Space", "8", 1000000, "100%", "Stabilized"],
+    ["five-seven-east-main", "5-7 East Main Street, Clinton, CT 06413", "Five seven LLC", "5-7 East Main Street", "Clinton, CT", "Commercial · Retail Space", "5", 500000, "100%", "Stabilized"],
+    ["143-edgewood-street", "143 Edgewood Street, Hartford, CT 06112", "143 Edgewood St LLC", "143 Edgewood Street", "Hartford, CT", "Residential", "3", 450000, "33%", "Stabilized"],
+    ["65-beelzebub-road", "65 Beelzebub Road, South Windsor, CT 06074", "Ahmed Kavita Trustee", "65 Beelzebub Road", "South Windsor, CT", "Residential", "1", 400000, "100%", "Stabilized"],
+    ["20-highland-park", "20 Highland Park, Enfield, CT 06082", "20 Highland park LLC", "20 Highland Park", "Enfield, CT", "Residential", "1", 300000, "100%", "Stabilized"],
+    ["258-farmington-avenue", "258 Farmington Avenue, Hartford, CT 06105", "258 Farmington Ave. LLC", "258 Farmington Avenue", "Hartford, CT", "Commercial · Retail Space", "1", 250000, "100%", "Stabilized"],
+    ["455-farmington-avenue", "455 Farmington Avenue, Hartford, CT 06105", "Check cashing store LLC", "455 Farmington Avenue", "Hartford, CT", "Commercial · Retail Space", "1", 450000, "100%", "Stabilized"],
+    ["affleck-building", "741-749 Park Street, Hartford, CT 06106", "Affleck Building LLC", "741-749 Park Street", "Hartford, CT", "Res/Com Multi use", "12", 1400000, "100%", "Stabilized"],
+    ["eternity-building", "692-700 Park Street, Hartford, CT 06106", "Eternity Building LLC", "692-700 Park Street", "Hartford, CT", "Res/Com Multi use", "8", 800000, "100%", "Stabilized"],
+    ["uptown-building", "1468-1470 Albany Avenue, Hartford, CT 06112", "Uptown Building LLC", "1468-1470 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "8", 1200000, "100%", "Under renovation"],
+    ["696-714-albany-avenue", "696-714 Albany Avenue, Hartford, CT 06112", "Andaleeb Enterprises LLC", "696-714 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "11", 1500000, "100%", "Under renovation"],
+    ["restaurant-building", "1113-1115 Albany Avenue, Hartford, CT 06112", "Restaurant Building LLC", "1113-1115 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "9", 500000, "100%", "Stabilized"],
+    ["terry-square-plaza", "2739 Main Street, Hartford, CT", "Terry Square plaza", "2739 Main Street", "Hartford, CT", "Commercial · Retail Space", "7", 750000, "100%", "Stabilized"],
+    ["merchant-association", "1108 Albany Avenue, Hartford, CT 06112", "The Merchant Association LLC", "1108 Albany Avenue", "Hartford, CT", "Commercial · Retail Space", "1", 365000, "100%", "Stabilized"],
+    ["885-albany-avenue", "885 Albany Avenue, Hartford, CT 06112", "885 Albany Avenue LLC", "885 Albany Avenue", "Hartford, CT", "Commercial · Retail Space", "1", 350000, "100%", "Stabilized"],
+    ["ten-mill-pond-lane", "10 Mill Pond Lane, Simsbury, CT 06070", "Ten Mill Pond Lane LLC", "10 Mill Pond Lane", "Simsbury, CT", "Commercial · Retail Space", "TBD", 0, "100%", "Closing in progress"]
   ].map((p, index) => {
     const typeKey = p[5].includes("Residential") ? "residential" : p[5].includes("Multi") ? "mixed" : "commercial";
     const media = propertyMedia[p[0]];
@@ -123,9 +123,19 @@ const AE = {
     ["new-tenant-openings", "New Tenant Openings Planned Across Hartford Portfolio", "November 12, 2025", "Leasing", "Several commercial spaces are being prepared for service businesses, food operators, and neighborhood-facing retail uses."]
   ],
   caseStudies: [
-    ["magnolia-building", "Magnolia Building", "Vacancy to mixed-use momentum", "A distressed Albany Avenue building repositioned with practical improvements and a tenant-first affordability strategy."],
-    ["696-714-albany-avenue", "696-714 Albany Avenue", "Under renovation", "A large mixed-use asset being stabilized through exterior repair, unit upgrades, and a phased commercial leasing plan."],
-    ["weaver-building", "Weaver Building", "Scale on the corridor", "A 24-unit mixed-use property that anchors a broader revitalization thesis for Albany Avenue."]
+    ["magnolia-building", "635-651 Albany Avenue, Hartford, CT 06112", "Vacancy to mixed-use momentum", "A distressed Albany Avenue building repositioned with practical improvements and a tenant-first affordability strategy."],
+    ["696-714-albany-avenue", "696-714 Albany Avenue, Hartford, CT 06112", "Under renovation", "A large mixed-use asset being stabilized through exterior repair, unit upgrades, and a phased commercial leasing plan."],
+    ["weaver-building", "1154-1170 Albany Avenue, Hartford, CT 06112", "Scale on the corridor", "A 24-unit mixed-use property that anchors a broader revitalization thesis for Albany Avenue."]
+  ],
+  womenEmpowered: [
+    { name: "Angela", business: "Edgewood Street tenant", slug: "143-edgewood-street", description: "Angela is a longtime tenant at Andaleeb's Edgewood Street property, part of the everyday fabric of the Edgewood neighborhood in Hartford." },
+    { name: "High Maintenance", business: "Fashion store, Weaver Building", slug: "weaver-building", description: "High Maintenance brings fashion retail to Albany Avenue, operating out of Andaleeb's Weaver Building." },
+    { name: "Wicked Cafe", business: "Cafe", description: "Wicked Cafe serves the neighborhood as one of the food and beverage tenants across the Andaleeb portfolio." },
+    { name: "Patricia", business: "Medical services, Winton Building", slug: "winton-building", description: "Patricia runs a medical operation focused on serving people with disabilities out of the Winton Building in Bloomfield." },
+    { name: "Neha Andaleeb", business: "Cell phone stores", description: "Neha Andaleeb owns and operates cell phone stores across the Andaleeb portfolio, bringing accessible retail and service to the community." },
+    { name: "Jenilee", business: "Partner, Carefree Boat Club", slug: "boat-club-building", description: "Jenilee is a partner in Carefree Boat Club, operating out of Andaleeb's Boat Club Building in Clinton." },
+    { name: "Patrice", business: "Passions, Tinker Building", slug: "tinker-building", description: "Patrice runs Passions, a business based in the Tinker Building on Albany Avenue." },
+    { name: "Kerryane", business: "Parlor", description: "Kerryane runs a parlor located above a Bank of America branch, one of the small businesses in Andaleeb's tenant community." }
   ]
 };
 

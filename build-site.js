@@ -30,6 +30,7 @@ const nav = (active, from = "") => `
       ["Properties", "properties/"],
       ["News", "news/"],
       ["Case Studies", "case-studies/"],
+      ["Women Empowered", "women-empowered/"],
       ["Contact", "contact/"]
     ].map(([label, url]) => `<a class="${active === label ? "active" : ""}" href="${from}${url}">${label}</a>`).join("")}
   </nav>
@@ -111,6 +112,13 @@ const stats = `
   <div><strong>$${(AE.company.totalValue / 1000000).toFixed(1)}M</strong><span>Market Value</span></div>
   <div><strong>$${(AE.company.investedEquity / 1000000).toFixed(1)}M</strong><span>Invested Equity</span></div>
 </section>`;
+const homeStats = `
+<section class="stats-band reveal">
+  <div><strong>${AE.company.totalAssets}</strong><span>Properties</span></div>
+  <div><strong>${AE.company.totalUnits.toLocaleString()}+</strong><span>Units / Commercial Spaces</span></div>
+  <div><strong>N/A</strong><span>Total Square Footage</span></div>
+  <div><strong>N/A</strong><span>Total Property Acreage</span></div>
+</section>`;
 
 write("index.html", layout({
   title: "Real Estate Revitalization",
@@ -130,13 +138,13 @@ write("index.html", layout({
     <p>Revitalizing legacy buildings into vibrant residential and commercial spaces.</p>
   </div>
 </section>
-${stats}
+${homeStats}
 <section class="about-panel">
   <div class="section-media"><img src="${photo(AE.properties.find(p => p.slug === "uptown-building").images[2])}" alt="Selective demolition inside the Uptown Building" loading="lazy" width="1200" height="900"></div>
   <div class="section-copy">
     <p class="eyebrow">Revitalization Model</p>
     <h2>Taking distressed properties from vacancy to value.</h2>
-    <p>Andaleeb focuses on buildings with strong locations, deferred maintenance, and unrealized neighborhood value. The work is practical: stabilize the asset, improve safety and curb appeal, keep rents accessible, and bring dependable tenants back to the corridor.</p>
+    <p>Andaleeb Enterprises revitalizes neighborhoods by taking on the buildings other owners walk away from. We buy distressed properties, fix what's broken, and bring them back into daily use as affordable housing and working commercial space. Rents stay within reach for the tenants and small businesses already rooted in these communities. The goal isn't a quick resale. It's a building that's safe, occupied, and contributing to a block that's coming back to life. That's how a struggling corridor turns into a vibrant one: one property, one tenant, one repaired storefront at a time.</p>
     <a class="solid-btn" href="about/">About the Company</a>
   </div>
 </section>
@@ -163,7 +171,7 @@ write("properties/index.html", layout({
   body: `
 <section class="page-title"><h1>Properties</h1></section>
 <section class="filters" aria-label="Property filters">
-  <a href="#all">All</a><a href="#commercial">Commercial</a><a href="#residential">Residential</a><a href="#mixed-use">Mixed Use</a><a href="#renovation">Under Renovation</a>
+  <a href="#commercial">Commercial</a><a href="#residential">Residential</a><a href="#mixed-use">Mixed Use</a>
 </section>
 <section class="property-grid" id="all">${AE.properties.map(p => propertyCard(p, "../")).join("")}</section>`
 }));
@@ -251,6 +259,27 @@ AE.caseStudies.forEach(c => {
     body: `<section class="detail-hero"><img src="${photo(property?.images[0] || AE.images.mixed, "../../")}" alt="${c[1]}" width="1800" height="980"><div><h1>${c[1]}</h1><p>${c[2]}</p></div></section><section class="detail-body"><aside><p class="eyebrow">Outcome</p><p>${property?.status || "Revitalization"}</p><p class="eyebrow">Focus</p><p>Building condition, tenant demand, community value</p></aside><article><h2>${c[2]}</h2><p>${c[3]}</p>${(property?.story || []).map(text => `<p>${text}</p>`).join("")}</article></section>${property?.stages.length ? `<section class="story-strip"><p class="eyebrow">Transformation Timeline</p><div>${property.images.map((img, index) => `<figure><img src="${photo(img, "../../")}" alt="${property.captions[index]}" loading="lazy" width="900" height="600"><figcaption><span>${property.stages[index]}</span>${property.captions[index]}</figcaption></figure>`).join("")}</div></section>` : ""}`
   }));
 });
+
+write("women-empowered/index.html", layout({
+  title: "Women Empowered Tenants",
+  active: "Women Empowered",
+  from: "../",
+  body: `
+<section class="page-title"><h1>Women Empowered Tenants</h1></section>
+<section class="image-banner"><div class="image-placeholder" role="img" aria-label="Photo coming soon"></div></section>
+<section class="two-col text-heavy">
+  <div><p>Across the Andaleeb portfolio, women run businesses that give Hartford-area neighborhoods their daily rhythm: retail, food, healthcare, and community services rooted in the buildings they call home.</p></div>
+</section>
+<section class="section">
+  <div class="tenant-grid">${AE.womenEmpowered.map(t => `
+    <article class="tenant-card">
+      <h3>${t.name}</h3>
+      <p class="eyebrow">${t.business}</p>
+      <p>${t.description}</p>
+      ${t.slug ? `<a class="outline-btn" href="../properties/${t.slug}/">View Property</a>` : ""}
+    </article>`).join("")}</div>
+</section>`
+}));
 
 write("contact/index.html", layout({
   title: "Contact",
