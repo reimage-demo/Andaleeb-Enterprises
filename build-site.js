@@ -67,7 +67,7 @@ const layout = ({ title, active, body, from = "" }) => `<!doctype html>
   <link rel="preload" href="${asset("images/andaleeb-logo.webp", from)}" as="image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600;1,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap">
   <link rel="stylesheet" href="${from}styles.css">
 </head>
 <body>
@@ -105,13 +105,6 @@ const newsCard = (n, from = "") => `
   <p>${n[4]}</p>
   <a class="outline-btn" href="${n[5] || `${from}news/${n[0]}/`}"${n[5] ? ` target="_blank" rel="noopener noreferrer"` : ""}>${n[5] ? "Read Article" : "Read More"}</a>
 </article>`;
-const stats = `
-<section class="stats-band reveal">
-  <div><strong>${AE.company.totalAssets}</strong><span>Properties</span></div>
-  <div><strong>${AE.company.totalUnits.toLocaleString()}+</strong><span>Units / Commercial Spaces</span></div>
-  <div><strong>$${(AE.company.totalValue / 1000000).toFixed(1)}M</strong><span>Market Value</span></div>
-  <div><strong>$${(AE.company.investedEquity / 1000000).toFixed(1)}M</strong><span>Invested Equity</span></div>
-</section>`;
 const homeStats = `
 <section class="stats-band reveal">
   <div><strong>${AE.company.totalAssets}</strong><span>Properties</span></div>
@@ -225,7 +218,7 @@ write("about/index.html", layout({
   <div><p>Andaleeb Enterprises is a Connecticut real estate owner and operator focused on the kind of properties that can change a block when they are brought back to life.</p></div>
   <div><h2>Revitalization with lender-ready discipline.</h2><p>The company combines acquisition, renovation, leasing, and long-term stewardship to turn aging buildings into productive assets for tenants, municipalities, and financing partners.</p></div>
 </section>
-${stats}
+${homeStats}
 <section class="strategy-grid">
   ${["Acquisition", "Stabilization", "Tenant Affordability", "Municipal Value"].map((h, idx) => `<article><h3>${h}</h3><p>${["Identify buildings with strong locations and fixable distress.", "Address maintenance, safety, exterior presence, and operating reliability.", "Create usable space at rents that small businesses and residents can sustain.", "Reactivate tax base, storefronts, housing supply, and neighborhood confidence."][idx]}</p></article>`).join("")}
 </section>`
