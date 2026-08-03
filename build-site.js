@@ -125,9 +125,9 @@ write("index.html", layout({
   active: "",
   body: `
 <section class="home-hero">
-  <img class="hero-still" src="assets/images/properties/governors-building/hero.webp" alt="Governor's Building in East Hartford" width="1800" height="1200">
-  <video autoplay muted playsinline preload="auto" poster="assets/images/properties/governors-building/hero.webp" aria-label="A building assembling from its foundation" data-hero-video>
-    <source src="assets/video/building-assembly-hero.mp4" type="video/mp4">
+  <img class="hero-still" src="assets/images/drone-hero-poster.webp" alt="Aerial drone view of the Andaleeb Enterprises portfolio in Hartford" width="1280" height="720">
+  <video autoplay muted playsinline preload="auto" poster="assets/images/drone-hero-poster.webp" aria-label="Aerial drone footage over Hartford, ending on the Andaleeb Enterprises wordmark" data-hero-video>
+    <source src="assets/video/andaleeb-drone-hero.mp4" type="video/mp4">
   </video>
   <button class="hero-video-toggle" type="button" aria-label="Pause hero video" aria-pressed="false" data-hero-video-toggle>
     <span class="pause-icon" aria-hidden="true"></span>
