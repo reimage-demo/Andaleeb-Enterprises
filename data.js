@@ -132,7 +132,7 @@ const AE = {
     { name: "Bank of America", logo: "bank-of-america.svg" },
     { name: "USPS", logo: "usps.svg" },
     { name: "H&R Block", logo: "hr-block.svg" },
-    { name: "Liberty Tax", logo: "liberty-tax.jpg" },
+    { name: "Liberty Tax", logo: "liberty-tax.png" },
     { name: "Bloomfield Housing Authority", logo: "bloomfield-housing-authority.png" },
     { name: "Carefree Boat Club", logo: "carefree-boat-club.webp", dark: true },
     { name: "Golden Crust", logo: "golden-krust.png" },

@@ -224,7 +224,7 @@ ${homeStats}
 <section class="tenant-band">
   <p class="eyebrow">Current Tenants</p>
   <h2>Backed by the businesses that keep these blocks moving.</h2>
-  <div class="tenant-logo-grid">${AE.tenants.map(t => `<div class="tenant-logo${t.dark ? " dark" : ""}${t.logo ? "" : " text-only"}">${t.logo ? `<img src="${photo(`assets/images/tenants/${t.logo}`, "../")}" alt="${t.name}" loading="lazy">` : `<span>${t.name}</span>`}</div>`).join("")}</div>
+  <div class="tenant-logo-row">${AE.tenants.map(t => `<div class="tenant-logo${t.dark ? " dark" : ""}${t.logo ? "" : " text-only"}">${t.logo ? `<img src="${photo(`assets/images/tenants/${t.logo}`, "../")}" alt="${t.name}" loading="lazy">` : `<span>${t.name}</span>`}</div>`).join("")}</div>
 </section>`
 }));
 
