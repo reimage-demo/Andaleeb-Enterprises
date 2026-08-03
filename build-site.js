@@ -13,12 +13,9 @@ const asset = (file, from = "") => `${from}assets/${file}`;
 const photo = (file, from = "") => /^https?:/.test(file) ? file : `${from}${file}`;
 const propUrl = (slug, from = "") => `${from}properties/${slug}/`;
 const newsImage = (slug) => ({
-  "hartford-courant-albany-avenue": "assets/images/properties/weaver-building/01.webp",
-  "albany-avenue-revitalization": "assets/images/properties/magnolia-building/01.webp",
-  "affordable-rent-commercial-corridors": "assets/images/properties/restaurant-building/01.webp",
-  "under-renovation-portfolio": "assets/images/properties/uptown-building/03.webp",
-  "hartford-tax-base-growth": "assets/images/properties/weaver-building/01.webp",
-  "new-tenant-openings": "assets/images/properties/magnolia-building/04.webp"
+  "albany-avenue-40-apartments": "assets/images/properties/magnolia-building/02.webp",
+  "governors-building-acquisition": "assets/images/properties/governors-building/01.webp",
+  "albany-avenue-vacant-storefronts-zoning": "assets/images/properties/restaurant-building/03.webp"
 })[slug] || AE.images.restoration;
 const nav = (active, from = "") => `
 <header class="site-header">
@@ -29,7 +26,6 @@ const nav = (active, from = "") => `
       ["About", "about/"],
       ["Properties", "properties/"],
       ["News", "news/"],
-      ["Case Studies", "case-studies/"],
       ["Women Empowered", "women-empowered/"],
       ["Contact", "contact/"]
     ].map(([label, url]) => `<a class="${active === label ? "active" : ""}" href="${from}${url}">${label}</a>`).join("")}
@@ -46,7 +42,6 @@ const foot = (from = "") => `
     <a href="${from}about/">About</a>
     <a href="${from}properties/">Properties</a>
     <a href="${from}news/">News</a>
-    <a href="${from}case-studies/">Case Studies</a>
   </div>
   <div class="footer-contact">
     <p class="eyebrow">Connect</p>
@@ -96,15 +91,19 @@ const overlayCard = (p, from = "") => `
     <div><h3>${p.name}</h3><p>${p.city}</p><span>More Details</span></div>
   </a>
 </article>`;
-const newsCard = (n, from = "") => `
+const newsCard = (n, from = "") => {
+  const href = n[5] || `${from}news/${n[0]}/`;
+  const linkAttrs = n[5] ? ` target="_blank" rel="noopener noreferrer"` : "";
+  return `
 <article class="news-card">
   <img src="${photo(newsImage(n[0]), from)}" alt="" loading="lazy" width="640" height="420">
   <p class="date">${n[2]}</p>
   <p class="source">${n[3]}</p>
-  <h3>${n[1]}</h3>
+  <h3><a href="${href}"${linkAttrs}>${n[1]}</a></h3>
   <p>${n[4]}</p>
-  <a class="outline-btn" href="${n[5] || `${from}news/${n[0]}/`}"${n[5] ? ` target="_blank" rel="noopener noreferrer"` : ""}>${n[5] ? "Read Article" : "Read More"}</a>
+  <a class="outline-btn" href="${href}"${linkAttrs}>${n[5] ? "Read Article" : "Read More"}</a>
 </article>`;
+};
 const homeStats = `
 <section class="stats-band reveal">
   <div><strong>${AE.company.totalAssets}</strong><span>Properties</span></div>
@@ -148,7 +147,7 @@ ${homeStats}
 </section>
 <section class="case-band">
   <h2 class="section-title">Case Studies</h2>
-  <div class="case-grid">${AE.caseStudies.map(c => `<article><p class="status">Revitalized</p><h3>${c[1]}</h3><p>${c[2]}</p><a href="case-studies/${c[0]}/">View Case Study</a></article>`).join("")}</div>
+  <div class="case-grid">${AE.caseStudies.map(c => `<article><p class="status">Revitalized</p><h3>${c[1]}</h3><p>${c[2]}</p><a href="properties/${c[0]}/">View Property</a></article>`).join("")}</div>
 </section>
 <section class="news-band">
   <h2 class="section-title">Latest News</h2>
@@ -213,14 +212,19 @@ write("about/index.html", layout({
   from: "../",
   body: `
 <section class="page-title"><h1>About</h1></section>
-<section class="image-banner"><img src="${AE.images.lobby}" alt="Renovated commercial interior" loading="lazy" width="1800" height="760"></section>
+<section class="image-banner"><img src="${photo("assets/images/properties/magnolia-building/01.webp", "../")}" alt="635-651 Albany Avenue, one of Andaleeb's renovated mixed-use buildings in Hartford" loading="lazy" width="1800" height="760"></section>
 <section class="two-col text-heavy">
-  <div><p>Andaleeb Enterprises is a Connecticut real estate owner and operator focused on the kind of properties that can change a block when they are brought back to life.</p></div>
-  <div><h2>Revitalization with lender-ready discipline.</h2><p>The company combines acquisition, renovation, leasing, and long-term stewardship to turn aging buildings into productive assets for tenants, municipalities, and financing partners.</p></div>
+  <div><p>Andaleeb Enterprises is a real estate holding company. It primarily grows the value of the properties it owns by renovating buildings that have fallen into disrepair, upgrading their systems and storefronts, and filling long-standing vacancies with tenants who serve the neighborhoods around them.</p></div>
+  <div><h2>A hands-on approach to ownership.</h2><p>Rather than holding buildings at a distance, Andaleeb stays involved after acquisition: repairing what's broken, modernizing what's outdated, and working directly with tenants to keep space occupied. The result is a portfolio of properties that function well for the people who live and work in them, and for the lenders and municipalities that rely on them.</p></div>
 </section>
 ${homeStats}
 <section class="strategy-grid">
   ${["Acquisition", "Stabilization", "Tenant Affordability", "Municipal Value"].map((h, idx) => `<article><h3>${h}</h3><p>${["Identify buildings with strong locations and fixable distress.", "Address maintenance, safety, exterior presence, and operating reliability.", "Create usable space at rents that small businesses and residents can sustain.", "Reactivate tax base, storefronts, housing supply, and neighborhood confidence."][idx]}</p></article>`).join("")}
+</section>
+<section class="tenant-band">
+  <p class="eyebrow">Current Tenants</p>
+  <h2>Backed by the businesses that keep these blocks moving.</h2>
+  <div class="tenant-logo-grid">${AE.tenants.map(t => `<div class="tenant-logo${t.dark ? " dark" : ""}${t.logo ? "" : " text-only"}">${t.logo ? `<img src="${photo(`assets/images/tenants/${t.logo}`, "../")}" alt="${t.name}" loading="lazy">` : `<span>${t.name}</span>`}</div>`).join("")}</div>
 </section>`
 }));
 
@@ -236,22 +240,6 @@ AE.news.filter(n => !n[5]).forEach(n => write(`news/${n[0]}/index.html`, layout(
   from: "../../",
   body: `<article class="article-page"><p class="date">${n[2]}</p><p class="source">${n[3]}</p><h1>${n[1]}</h1><img src="${photo(newsImage(n[0]), "../../")}" alt="" width="1400" height="720"><p>${n[4]}</p><p>This project update reflects Andaleeb's focus on durable building improvements, active neighborhood space, and long-term stewardship across the Connecticut portfolio.</p><a class="outline-btn" href="../">All News</a></article>`
 })));
-
-write("case-studies/index.html", layout({
-  title: "Case Studies",
-  active: "Case Studies",
-  from: "../",
-  body: `<section class="page-title"><h1>Case Studies</h1></section><section class="case-band standalone"><div class="case-grid">${AE.caseStudies.map(c => `<article><p class="status">Revitalization</p><h3>${c[1]}</h3><p>${c[3]}</p><a href="${c[0]}/">View Case Study</a></article>`).join("")}</div></section>`
-}));
-AE.caseStudies.forEach(c => {
-  const property = AE.properties.find(p => p.slug === c[0]);
-  write(`case-studies/${c[0]}/index.html`, layout({
-    title: c[1],
-    active: "Case Studies",
-    from: "../../",
-    body: `<section class="detail-hero"><img src="${photo(property?.images[0] || AE.images.mixed, "../../")}" alt="${c[1]}" width="1800" height="980"><div><h1>${c[1]}</h1><p>${c[2]}</p></div></section><section class="detail-body"><aside><p class="eyebrow">Outcome</p><p>${property?.status || "Revitalization"}</p><p class="eyebrow">Focus</p><p>Building condition, tenant demand, community value</p></aside><article><h2>${c[2]}</h2><p>${c[3]}</p>${(property?.story || []).map(text => `<p>${text}</p>`).join("")}</article></section>${property?.stages.length ? `<section class="story-strip"><p class="eyebrow">Transformation Timeline</p><div>${property.images.map((img, index) => `<figure><img src="${photo(img, "../../")}" alt="${property.captions[index]}" loading="lazy" width="900" height="600"><figcaption><span>${property.stages[index]}</span>${property.captions[index]}</figcaption></figure>`).join("")}</div></section>` : ""}`
-  }));
-});
 
 write("women-empowered/index.html", layout({
   title: "Women Empowered Tenants",

@@ -38,7 +38,7 @@ document.querySelectorAll("[data-gallery-image]").forEach((button) => {
   });
 });
 
-const revealTargets = document.querySelectorAll(".reveal");
+const revealTargets = document.querySelectorAll(".reveal, .tenant-logo");
 if (revealTargets.length) {
   if ("IntersectionObserver" in window) {
     const revealObserver = new IntersectionObserver((entries, observer) => {

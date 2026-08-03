@@ -115,17 +115,31 @@ const AE = {
     };
   }),
   news: [
-    ["hartford-courant-albany-avenue", "On One of This CT City's Busiest Thoroughfares, a Developer Snaps Up Properties. Here's the Plan", "September 11, 2023", "Hartford Courant", "The Hartford Courant examines Andaleeb's growing presence and revitalization plans along Hartford's Albany Avenue corridor.", "https://www.courant.com/2023/09/11/on-one-of-this-ct-citys-busiest-thoroughfares-a-developer-snaps-up-properties-heres-the-plan/"],
-    ["albany-avenue-revitalization", "Andaleeb Advances Albany Avenue Revitalization Strategy", "May 29, 2026", "Portfolio Update", "A coordinated program of facade repair, tenant improvements, and residential upgrades is bringing long-vacant space back into daily use."],
-    ["affordable-rent-commercial-corridors", "Affordable Commercial Rents Help Local Operators Expand", "April 18, 2026", "Community Impact", "Andaleeb properties continue to support neighborhood businesses with flexible spaces, visible storefronts, and practical build-out support."],
-    ["under-renovation-portfolio", "Two Mixed-Use Assets Move Into Active Renovation", "March 6, 2026", "Construction", "The Uptown Building and 696-714 Albany Avenue are being repositioned for safer housing, stronger curb appeal, and street-level activity."],
-    ["hartford-tax-base-growth", "Reactivated Buildings Strengthen Hartford's Tax Base", "January 22, 2026", "Economic Development", "The company's rehabilitation model targets distressed assets that can return value to municipalities, lenders, tenants, and surrounding blocks."],
-    ["new-tenant-openings", "New Tenant Openings Planned Across Hartford Portfolio", "November 12, 2025", "Leasing", "Several commercial spaces are being prepared for service businesses, food operators, and neighborhood-facing retail uses."]
+    ["albany-avenue-40-apartments", "Hartford Seeks to Transform Blighted Albany Avenue Site Into 40 Apartments With Retail", "December 14, 2022", "Hartford Business Journal", "The city of Hartford selected Andaleeb Enterprises to redevelop a long-vacant, fire-damaged site on Albany Avenue into 40 apartments and 3,000 square feet of retail space.", "https://hartfordbusiness.com/article/hartford-seeks-to-transform-blighted-albany-avenue-site-into-40-apartments-with-retail/"],
+    ["governors-building-acquisition", "Prominent Downtown East Hartford Mixed-Use Office Building Sells to Realty Investor Active in Neighboring Hartford", "January 4, 2024", "Hartford Business Journal", "Governor's Building LLC, an entity tied to Andaleeb principal Kavita Ahmed, acquired the 18,527-square-foot “Governor's Corner” building in downtown East Hartford for $750,000.", "https://hartfordbusiness.com/article/prominent-downtown-east-hartford-mixed-use-office-building-sells-to-realty-investor-active/"],
+    ["albany-avenue-vacant-storefronts-zoning", "Eager to Fill Vacant Storefronts, Hartford Seeks to Allow Office Space in First-Floor Mixed-Use Properties", "March 5, 2024", "Hartford Business Journal", "A proposed Hartford zoning change would allow first-floor office use in mixed-use buildings along key commercial corridors, including Andaleeb's own property at 919 Albany Avenue, to help fill vacant storefronts.", "https://hartfordbusiness.com/article/eager-to-fill-vacant-storefronts-hartford-seeks-to-allow-office-space-in-first-floor-mixed/"],
+    ["south-windsor-colony-complex-sale", "Five-Building Retail-Office Complex in South Windsor Fetches $2M", "August 27, 2024", "Hartford Business Journal", "The Kavita Ahmed Family Trust purchased the five-building Colony Shopping Complex at 942 Sullivan Avenue in South Windsor for $2 million, adding to the family's portfolio of Hartford-area retail and apartment properties.", "https://hartfordbusiness.com/article/five-building-retail-office-complex-in-south-windsor-fetches-2m/"]
   ],
   caseStudies: [
     ["magnolia-building", "635-651 Albany Avenue, Hartford, CT 06112", "Vacancy to mixed-use momentum", "A distressed Albany Avenue building repositioned with practical improvements and a tenant-first affordability strategy."],
     ["696-714-albany-avenue", "696-714 Albany Avenue, Hartford, CT 06112", "Under renovation", "A large mixed-use asset being stabilized through exterior repair, unit upgrades, and a phased commercial leasing plan."],
     ["weaver-building", "1154-1170 Albany Avenue, Hartford, CT 06112", "Scale on the corridor", "A 24-unit mixed-use property that anchors a broader revitalization thesis for Albany Avenue."]
+  ],
+  tenants: [
+    { name: "Metro Wireless", logo: "metro-wireless.svg" },
+    { name: "Cricket Wireless", logo: "cricket-wireless.svg" },
+    { name: "Total Wireless", logo: "total-wireless.png" },
+    { name: "Bank of America", logo: "bank-of-america.svg" },
+    { name: "USPS", logo: "usps.svg" },
+    { name: "H&R Block", logo: "hr-block.svg" },
+    { name: "Liberty Tax", logo: "liberty-tax.jpg" },
+    { name: "Bloomfield Housing Authority", logo: "bloomfield-housing-authority.png" },
+    { name: "Carefree Boat Club", logo: "carefree-boat-club.webp", dark: true },
+    { name: "Golden Crust", logo: "golden-krust.png" },
+    { name: "Angela of Edgewood", logo: "angel-of-edgewood.png" },
+    { name: "JN Money Service", logo: "jn-money.png" },
+    { name: "Wicked Cafe", logo: null },
+    { name: "Go Net Speed", logo: "gonetspeed.svg" }
   ],
   womenEmpowered: [
     { name: "Angela", business: "Edgewood Street tenant", slug: "143-edgewood-street", description: "Angela is a longtime tenant at Andaleeb's Edgewood Street property, part of the everyday fabric of the Edgewood neighborhood in Hartford." },
