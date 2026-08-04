@@ -38,7 +38,7 @@ document.querySelectorAll("[data-gallery-image]").forEach((button) => {
   });
 });
 
-const revealTargets = document.querySelectorAll(".reveal, .tenant-logo");
+const revealTargets = document.querySelectorAll(".reveal");
 if (revealTargets.length) {
   if ("IntersectionObserver" in window) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -53,6 +53,32 @@ if (revealTargets.length) {
   } else {
     revealTargets.forEach((target) => target.classList.add("is-visible"));
   }
+}
+
+const tenantLogos = document.querySelectorAll(".tenant-logo");
+if (tenantLogos.length && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  let queued = false;
+  const updateTenantFocus = () => {
+    const center = innerHeight / 2;
+    const maxDist = innerHeight * 0.65;
+    tenantLogos.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const dist = Math.abs(rect.top + rect.height / 2 - center);
+      const focus = Math.max(0, 1 - dist / maxDist);
+      el.style.opacity = (0.35 + 0.65 * focus).toFixed(3);
+      el.style.filter = `grayscale(${(1 - focus).toFixed(3)})`;
+    });
+    queued = false;
+  };
+  const queueUpdate = () => {
+    if (!queued) {
+      queued = true;
+      requestAnimationFrame(updateTenantFocus);
+    }
+  };
+  addEventListener("scroll", queueUpdate, { passive: true });
+  addEventListener("resize", queueUpdate);
+  updateTenantFocus();
 }
 
 const heroVideo = document.querySelector("[data-hero-video]");
