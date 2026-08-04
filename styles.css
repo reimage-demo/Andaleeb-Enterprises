@@ -136,6 +136,12 @@ h1, h2, h3, p { margin-top: 0; }
 .tenant-card .outline-btn { margin-top: 18px; }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; max-width: 1400px; margin: 70px auto; padding: 0 4vw; }
 .text-heavy p { font-size: 21px; color: #4b4b4b; }
+.ownership-block { max-width: 940px; margin: 90px auto; padding: 0 4vw; }
+.ownership-block h2 { font-family: var(--font-display); font-weight: 400; font-size: clamp(30px, 3.6vw, 48px); color: var(--muted); margin-bottom: 34px; }
+.ownership-copy { background: var(--soft); border: 1px solid var(--line); border-radius: 4px; padding: clamp(32px, 5vw, 64px); }
+.ownership-copy p { font-size: clamp(18px, 1.6vw, 21px); line-height: 1.75; color: var(--ink); }
+.ownership-copy p + p { margin-top: 26px; }
+.focus-copy { opacity: .45; transition: opacity .2s ease-out; }
 .strategy-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 80px 4vw; }
 .strategy-grid article { padding: 34px; border: 1px solid var(--line); background: var(--paper); }
 .strategy-grid h3 { text-transform: uppercase; letter-spacing: 3px; }
@@ -228,4 +234,5 @@ input, textarea { width: 100%; border: 1px solid var(--line); padding: 14px 16px
 }
 @media (prefers-reduced-motion: reduce) {
   .tenant-logo { opacity: 1; filter: none; transition: none; }
+  .focus-copy { opacity: 1; transition: none; }
 }
