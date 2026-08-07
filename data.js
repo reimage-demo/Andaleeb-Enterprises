@@ -50,6 +50,40 @@ const propertyMedia = {
   }
 };
 
+const matterport = (id) => `https://my.matterport.com/show/?m=${id}`;
+const propertyTours = {
+  "winton-building": [{ url: matterport("mH5hYotLX5g"), label: "45 Wintonbury Avenue" }],
+  "governors-building": [{ url: matterport("QNHb3YJgz9b"), label: "Governor's Building – 2S, 3S & 3N" }],
+  "restaurant-building": [{ url: matterport("8gjwUoJLbjs"), label: "1113 Albany Avenue Apartments" }],
+  "post-office-building": [{ url: matterport("de3418jP7nD"), label: "651 Maple Avenue" }],
+  "696-714-albany-avenue": [
+    { url: matterport("wbcW1dwiRF9"), label: "696 Albany Avenue" },
+    { url: matterport("zpVzNzVDmJd"), label: "696-714 Albany Avenue" },
+    { url: matterport("kZyHrRwJw53"), label: "696-714 Albany Avenue" }
+  ],
+  "690-albany-avenue": [{ url: matterport("HMrCvfeczma"), label: "690 Albany Avenue – Boost Mobile Store" }],
+  "sullivan-avenue-portfolio": [
+    { url: matterport("feg82K1GjHi"), label: "942-946 Sullivan Avenue" },
+    { url: matterport("oA4sunQQfeA"), label: "950-952 Sullivan Avenue" },
+    { url: matterport("GBLJ5CcjAM6"), label: "948 Sullivan Avenue" },
+    { url: matterport("WWywACQGSME"), label: "972 Sullivan Avenue" },
+    { url: matterport("8xJnG4eL8Q5"), label: "982-984 Sullivan Avenue" },
+    { url: matterport("f7hNYAJLTf2"), label: "978-980 Sullivan Avenue" },
+    { url: matterport("dccKtqzm1V6"), label: "960 Sullivan Avenue" },
+    { url: matterport("mfHoUcT6foB"), label: "950-954 Sullivan Avenue – B&G Lounge and Upstairs" }
+  ],
+  "magnolia-building": [{ url: matterport("x9sEh7Cz3kV"), label: "635 Albany Avenue" }],
+  "907-albany-avenue": [
+    { url: matterport("3J3TEuW94sM"), label: "907-909 Albany Avenue – First Floor" },
+    { url: matterport("yCe1oneqjN9"), label: "907-909 Albany Avenue – Second and Third Floors" }
+  ],
+  "boat-club-building": [
+    { url: matterport("v5Z8XKWyp2K"), label: "3 East Main Street, Unit 1" },
+    { url: matterport("H9MjMyB9oe1"), label: "3 East Main Street, Unit 1" }
+  ],
+  "five-seven-east-main": [{ url: matterport("CjUp2xGgvA4"), label: "5 East Main Street" }]
+};
+
 const AE = {
   company: {
     name: "Andaleeb Enterprises",
@@ -71,7 +105,7 @@ const AE = {
     ["919-albany-avenue", "919 Albany Avenue, Hartford, CT 06112", "919 Albany Avenue LLC", "919 Albany Avenue", "Hartford, CT", "Commercial · Retail Space", "3", 900000, "100%", "Stabilized"],
     ["tinker-building", "1136-1150 Albany Avenue, Hartford, CT 06112", "Tinker building LLC", "1136-1150 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "10", 1500000, "100%", "Stabilized"],
     ["weaver-building", "1154-1170 Albany Avenue, Hartford, CT 06112", "Weaver Building LLC", "1154-1170 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "24", 3000000, "100%", "Stabilized"],
-    ["winton-building", "45 Wintonbury Avenue, Bloomfield, CT 06002", "Winton building LLC", "45 Wintonbury Avenue", "Bloomfield, CT", "Commercial · Retail Space", "29", 2000000, "100%", "Stabilized"],
+    ["winton-building", "45 Wintonbury Avenue, Bloomfield, CT 06002", "Winton building LLC", "45 Wintonbury Avenue", "Bloomfield, CT", "Commercial · Office Space", "29", 2000000, "100%", "Stabilized"],
     ["governors-building", "987-1003 Main Street, East Hartford, CT 06108", "Governor's Building LLC", "987-1003 Main Street", "East Hartford, CT", "Commercial · Retail Space", "12", 1400000, "100%", "Stabilized"],
     ["post-office-building", "641-651 Maple Avenue, Hartford, CT 06114", "Post Office Building LLC", "641-651 Maple Avenue", "Hartford, CT", "Commercial · Retail Space", "5", 2000000, "50%", "Stabilized"],
     ["sullivan-avenue-portfolio", "942-986 Sullivan Avenue, South Windsor, CT 06074", "Kavita Ahmed Family trust", "942-986 Sullivan Avenue", "South Windsor, CT", "Commercial · Retail Space", "14", 3000000, "100%", "Stabilized"],
@@ -88,11 +122,12 @@ const AE = {
     ["696-714-albany-avenue", "696-714 Albany Avenue, Hartford, CT 06112", "Andaleeb Enterprises LLC", "696-714 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "11", 1500000, "100%", "Under renovation"],
     ["restaurant-building", "1113-1115 Albany Avenue, Hartford, CT 06112", "Restaurant Building LLC", "1113-1115 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "9", 500000, "100%", "Stabilized"],
     ["terry-square-plaza", "2739 Main Street, Hartford, CT", "Terry Square plaza", "2739 Main Street", "Hartford, CT", "Commercial · Retail Space", "7", 750000, "100%", "Stabilized"],
-    ["merchant-association", "1108 Albany Avenue, Hartford, CT 06112", "The Merchant Association LLC", "1108 Albany Avenue", "Hartford, CT", "Commercial · Retail Space", "1", 365000, "100%", "Stabilized"],
+    ["merchant-association", "1108 Albany Avenue, Hartford, CT 06112", "The Merchant Association LLC", "1108 Albany Avenue", "Hartford, CT", "Commercial · Office Space", "1", 365000, "100%", "Stabilized"],
     ["885-albany-avenue", "885 Albany Avenue, Hartford, CT 06112", "885 Albany Avenue LLC", "885 Albany Avenue", "Hartford, CT", "Commercial · Retail Space", "1", 350000, "100%", "Stabilized"],
     ["ten-mill-pond-lane", "10 Mill Pond Lane, Simsbury, CT 06070", "Ten Mill Pond Lane LLC", "10 Mill Pond Lane", "Simsbury, CT", "Commercial · Retail Space", "TBD", 0, "100%", "Closing in progress"]
   ].map((p, index) => {
     const typeKey = p[5].includes("Residential") ? "residential" : p[5].includes("Multi") ? "mixed" : "commercial";
+    const commercialType = typeKey === "commercial" ? (p[5].includes("Office") ? "office" : "retail") : null;
     const media = propertyMedia[p[0]];
     const imgSet = media ? media.images.map(file => `assets/images/properties/${p[0]}/${file}`) : [images[typeKey], images.street, images.restoration, images.lobby, images.brick];
     return {
@@ -103,6 +138,8 @@ const AE = {
       address: p[3],
       city: p[4],
       type: p[5],
+      category: typeKey,
+      commercialType,
       units: p[6],
       value: p[7],
       owned: p[8],
@@ -111,6 +148,7 @@ const AE = {
       stages: media?.stages || [],
       captions: media?.captions || [],
       story: media?.story || [],
+      tours: propertyTours[p[0]] || [],
       featured: ["magnolia-building", "weaver-building", "696-714-albany-avenue", "governors-building"].includes(p[0])
     };
   }),

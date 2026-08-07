@@ -13,19 +13,44 @@ if (topButton) {
   addEventListener("scroll", () => topButton.classList.toggle("visible", scrollY > 700), { passive: true });
 }
 
-document.querySelectorAll(".filters a").forEach((filter) => {
-  filter.addEventListener("click", (event) => {
-    event.preventDefault();
-    const term = filter.textContent.toLowerCase();
-    document.querySelectorAll(".property-card").forEach((card) => {
-      const text = card.textContent.toLowerCase();
-      const show = term === "all" || text.includes(term.replace("mixed use", "multi use")) || text.includes(term);
+const topFilters = document.querySelectorAll("[data-filter]");
+const subFilterSection = document.querySelector("[data-sub-filters]");
+const subFilters = document.querySelectorAll("[data-subfilter]");
+const propertyCards = document.querySelectorAll(".property-card");
+if (topFilters.length) {
+  let activeTop = "all";
+  let activeSub = "all";
+  const applyFilters = () => {
+    propertyCards.forEach((card) => {
+      let show = activeTop === "all" || card.dataset.category === activeTop;
+      if (show && activeTop === "commercial" && activeSub !== "all") show = card.dataset.subtype === activeSub;
       card.hidden = !show;
     });
-    document.querySelectorAll(".filters a").forEach((item) => item.classList.remove("active"));
-    filter.classList.add("active");
+  };
+  topFilters.forEach((filter) => {
+    filter.addEventListener("click", (event) => {
+      event.preventDefault();
+      activeTop = filter.dataset.filter;
+      activeSub = "all";
+      topFilters.forEach((item) => item.classList.remove("active"));
+      filter.classList.add("active");
+      if (subFilterSection) {
+        subFilterSection.hidden = activeTop !== "commercial";
+        subFilters.forEach((item) => item.classList.toggle("active", item.dataset.subfilter === "all"));
+      }
+      applyFilters();
+    });
   });
-});
+  subFilters.forEach((filter) => {
+    filter.addEventListener("click", (event) => {
+      event.preventDefault();
+      activeSub = filter.dataset.subfilter;
+      subFilters.forEach((item) => item.classList.remove("active"));
+      filter.classList.add("active");
+      applyFilters();
+    });
+  });
+}
 
 const detailHero = document.querySelector(".detail-hero > img");
 document.querySelectorAll("[data-gallery-image]").forEach((button) => {

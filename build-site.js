@@ -73,7 +73,7 @@ ${foot(from)}
 </html>`;
 
 const propertyCard = (p, from = "") => `
-<article class="property-card">
+<article class="property-card" data-category="${p.category}" data-subtype="${p.commercialType || ""}">
   <a href="${propUrl(p.slug, from)}">
     <img src="${photo(p.images[0], from)}" alt="${p.name}" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -162,8 +162,11 @@ write("properties/index.html", layout({
   from: "../",
   body: `
 <section class="page-title"><h1>Properties</h1></section>
-<section class="filters" aria-label="Property filters">
-  <a href="#commercial">Commercial</a><a href="#residential">Residential</a><a href="#mixed-use">Mixed Use</a>
+<section class="filters" aria-label="Property filters" data-filters>
+  <a href="#all" data-filter="all" class="active">All</a><a href="#commercial" data-filter="commercial">Commercial</a><a href="#residential" data-filter="residential">Residential</a><a href="#mixed-use" data-filter="mixed">Mixed Use</a>
+</section>
+<section class="filters sub-filters" aria-label="Commercial property type" data-sub-filters hidden>
+  <a href="#commercial" data-subfilter="all" class="active">All Commercial</a><a href="#commercial-retail" data-subfilter="retail">Retail</a><a href="#commercial-office" data-subfilter="office">Office</a>
 </section>
 <section class="property-grid" id="all">${AE.properties.map(p => propertyCard(p, "../")).join("")}</section>`
 }));
@@ -194,6 +197,10 @@ AE.properties.forEach((p, i) => {
     ${(p.story.length ? p.story : [`${p.name} represents Andaleeb's disciplined approach to neighborhood real estate: acquire overlooked buildings, repair the physical condition, improve operations, and make the property useful again for tenants and lenders.`, `At ${p.address}, the company is focused on durable improvements that protect the asset, support affordable occupancy, and strengthen the surrounding commercial corridor.`]).map(text => `<p>${text}</p>`).join("")}
   </article>
 </section>
+${p.tours.length ? `<section class="tour-section">
+  <h2 class="section-title">Virtual Tour${p.tours.length > 1 ? "s" : ""}</h2>
+  <div class="tour-grid">${p.tours.map(t => `<div class="tour-embed"><iframe src="${t.url}" title="${t.label ? `${t.label} — ` : ""}${p.name} virtual tour" loading="lazy" allow="autoplay; fullscreen; web-share; xr-spatial-tracking" allowfullscreen></iframe>${t.label ? `<p class="tour-label">${t.label}</p>` : ""}</div>`).join("")}</div>
+</section>` : ""}
 ${p.stages.length ? `<section class="story-strip"><p class="eyebrow">Photo Story</p><div>${p.images.map((img, index) => `<figure><img src="${photo(img, "../../")}" alt="${p.captions[index]}" loading="lazy" width="900" height="600"><figcaption><span>${p.stages[index]}</span>${p.captions[index]}</figcaption></figure>`).join("")}</div></section>` : ""}
 <section class="amenity-band reveal">
   <h2>Impact Areas</h2>

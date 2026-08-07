@@ -94,6 +94,9 @@ h1, h2, h3, p { margin-top: 0; }
 .filters a { padding: 12px 24px; border-right: 1px solid var(--line); color: var(--muted); }
 .filters a:last-child { border-right: 0; }
 .filters a.active, .filters a:hover { color: var(--gold); }
+.sub-filters { gap: 0; padding: 0 4vw 30px; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; }
+.sub-filters a { padding: 8px 18px; color: var(--muted); }
+.sub-filters[hidden] { display: none; }
 .property-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; padding: 0 4vw 80px; }
 .property-card { background: #e9e9e9; text-align: center; min-height: 100%; }
 .property-card[hidden] { display: none; }
@@ -114,6 +117,10 @@ h1, h2, h3, p { margin-top: 0; }
 .detail-body aside p:not(.eyebrow) { font-size: 22px; margin-bottom: 18px; }
 .detail-body article h2 { color: var(--gold); text-transform: uppercase; letter-spacing: 7px; font-size: 22px; }
 .detail-body article p { font-size: 21px; color: #4b4b4b; }
+.tour-section { padding: 0 4vw 90px; }
+.tour-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 1400px; margin: 0 auto; }
+.tour-embed iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; display: block; background: var(--soft); box-shadow: var(--shadow); }
+.tour-label { margin: 12px 0 0; color: var(--muted); font-size: 13px; text-align: center; }
 .story-strip { padding: 76px 4vw 90px; background: #f3f1ed; }
 .story-strip > .eyebrow { text-align: center; margin-bottom: 30px; }
 .story-strip > div { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; max-width: 1740px; margin: 0 auto; }
@@ -181,6 +188,7 @@ input, textarea { width: 100%; border: 1px solid var(--line); padding: 14px 16px
   .home-hero .hero-content { left: 50%; bottom: 50%; width: calc(100% - 40px); padding: 20px 0; transform: translate(-50%, 50%); }
   .stats-band, .feature-grid, .case-grid, .news-grid, .about-panel, .two-col, .strategy-grid, .contact-panel, .site-footer, .detail-body, .amenity-band div, .tenant-grid { grid-template-columns: 1fr; }
   .story-strip > div { grid-template-columns: repeat(2, 1fr); }
+  .tour-grid { grid-template-columns: 1fr; }
   .footer-bottom { grid-column: 1; }
   .property-grid { grid-template-columns: repeat(2, 1fr); }
   .section-media img { height: 380px; }

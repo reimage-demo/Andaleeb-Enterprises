@@ -22,11 +22,14 @@
 </header>
 <main>
 <section class="page-title"><h1>Properties</h1></section>
-<section class="filters" aria-label="Property filters">
-  <a href="#commercial">Commercial</a><a href="#residential">Residential</a><a href="#mixed-use">Mixed Use</a>
+<section class="filters" aria-label="Property filters" data-filters>
+  <a href="#all" data-filter="all" class="active">All</a><a href="#commercial" data-filter="commercial">Commercial</a><a href="#residential" data-filter="residential">Residential</a><a href="#mixed-use" data-filter="mixed">Mixed Use</a>
+</section>
+<section class="filters sub-filters" aria-label="Commercial property type" data-sub-filters hidden>
+  <a href="#commercial" data-subfilter="all" class="active">All Commercial</a><a href="#commercial-retail" data-subfilter="retail">Retail</a><a href="#commercial-office" data-subfilter="office">Office</a>
 </section>
 <section class="property-grid" id="all">
-<article class="property-card">
+<article class="property-card" data-category="mixed" data-subtype="">
   <a href="../properties/magnolia-building/">
     <img src="../assets/images/properties/magnolia-building/01.webp" alt="635-651 Albany Avenue, Hartford, CT 06112" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -37,7 +40,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="commercial" data-subtype="retail">
   <a href="../properties/690-albany-avenue/">
     <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=76" alt="690 Albany Avenue, Hartford, CT 06112" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -48,7 +51,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="commercial" data-subtype="retail">
   <a href="../properties/895-albany-avenue/">
     <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=76" alt="895 Albany Avenue, Hartford, CT 06112" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -59,7 +62,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="mixed" data-subtype="">
   <a href="../properties/907-albany-avenue/">
     <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1600&q=76" alt="907 Albany Avenue, Hartford, CT 06112" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -70,7 +73,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="commercial" data-subtype="retail">
   <a href="../properties/919-albany-avenue/">
     <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=76" alt="919 Albany Avenue, Hartford, CT 06112" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -81,7 +84,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="mixed" data-subtype="">
   <a href="../properties/tinker-building/">
     <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1600&q=76" alt="1136-1150 Albany Avenue, Hartford, CT 06112" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -92,7 +95,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="mixed" data-subtype="">
   <a href="../properties/weaver-building/">
     <img src="../assets/images/properties/weaver-building/01.webp" alt="1154-1170 Albany Avenue, Hartford, CT 06112" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -103,18 +106,18 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="commercial" data-subtype="office">
   <a href="../properties/winton-building/">
     <img src="../assets/images/properties/winton-building/01.webp" alt="45 Wintonbury Avenue, Bloomfield, CT 06002" loading="lazy" width="640" height="460">
     <div class="property-card-body">
       <h3>45 Wintonbury Avenue, Bloomfield, CT 06002</h3>
       <p>Bloomfield, CT</p>
-      <small>Commercial · Retail Space · Stabilized</small>
+      <small>Commercial · Office Space · Stabilized</small>
       <span class="outline-btn">More Details</span>
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="commercial" data-subtype="retail">
   <a href="../properties/governors-building/">
     <img src="../assets/images/properties/governors-building/01.webp" alt="987-1003 Main Street, East Hartford, CT 06108" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -125,7 +128,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="commercial" data-subtype="retail">
   <a href="../properties/post-office-building/">
     <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=76" alt="641-651 Maple Avenue, Hartford, CT 06114" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -136,7 +139,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="commercial" data-subtype="retail">
   <a href="../properties/sullivan-avenue-portfolio/">
     <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=76" alt="942-986 Sullivan Avenue, South Windsor, CT 06074" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -147,7 +150,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="commercial" data-subtype="retail">
   <a href="../properties/boat-club-building/">
     <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=76" alt="1-3 East Main Street, Clinton, CT 06413" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -158,7 +161,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="commercial" data-subtype="retail">
   <a href="../properties/five-seven-east-main/">
     <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=76" alt="5-7 East Main Street, Clinton, CT 06413" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -169,7 +172,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="residential" data-subtype="">
   <a href="../properties/143-edgewood-street/">
     <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&w=1600&q=76" alt="143 Edgewood Street, Hartford, CT 06112" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -180,7 +183,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="residential" data-subtype="">
   <a href="../properties/65-beelzebub-road/">
     <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&w=1600&q=76" alt="65 Beelzebub Road, South Windsor, CT 06074" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -191,7 +194,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="residential" data-subtype="">
   <a href="../properties/20-highland-park/">
     <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&w=1600&q=76" alt="20 Highland Park, Enfield, CT 06082" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -202,7 +205,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="commercial" data-subtype="retail">
   <a href="../properties/258-farmington-avenue/">
     <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=76" alt="258 Farmington Avenue, Hartford, CT 06105" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -213,7 +216,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="commercial" data-subtype="retail">
   <a href="../properties/455-farmington-avenue/">
     <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=76" alt="455 Farmington Avenue, Hartford, CT 06105" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -224,7 +227,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="mixed" data-subtype="">
   <a href="../properties/affleck-building/">
     <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1600&q=76" alt="741-749 Park Street, Hartford, CT 06106" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -235,7 +238,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="mixed" data-subtype="">
   <a href="../properties/eternity-building/">
     <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1600&q=76" alt="692-700 Park Street, Hartford, CT 06106" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -246,7 +249,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="mixed" data-subtype="">
   <a href="../properties/uptown-building/">
     <img src="../assets/images/properties/uptown-building/01.webp" alt="1468-1470 Albany Avenue, Hartford, CT 06112" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -257,7 +260,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="mixed" data-subtype="">
   <a href="../properties/696-714-albany-avenue/">
     <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1600&q=76" alt="696-714 Albany Avenue, Hartford, CT 06112" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -268,7 +271,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="mixed" data-subtype="">
   <a href="../properties/restaurant-building/">
     <img src="../assets/images/properties/restaurant-building/01.webp" alt="1113-1115 Albany Avenue, Hartford, CT 06112" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -279,7 +282,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="commercial" data-subtype="retail">
   <a href="../properties/terry-square-plaza/">
     <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=76" alt="2739 Main Street, Hartford, CT" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -290,18 +293,18 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="commercial" data-subtype="office">
   <a href="../properties/merchant-association/">
     <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=76" alt="1108 Albany Avenue, Hartford, CT 06112" loading="lazy" width="640" height="460">
     <div class="property-card-body">
       <h3>1108 Albany Avenue, Hartford, CT 06112</h3>
       <p>Hartford, CT</p>
-      <small>Commercial · Retail Space · Stabilized</small>
+      <small>Commercial · Office Space · Stabilized</small>
       <span class="outline-btn">More Details</span>
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="commercial" data-subtype="retail">
   <a href="../properties/885-albany-avenue/">
     <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=76" alt="885 Albany Avenue, Hartford, CT 06112" loading="lazy" width="640" height="460">
     <div class="property-card-body">
@@ -312,7 +315,7 @@
     </div>
   </a>
 </article>
-<article class="property-card">
+<article class="property-card" data-category="commercial" data-subtype="retail">
   <a href="../properties/ten-mill-pond-lane/">
     <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=76" alt="10 Mill Pond Lane, Simsbury, CT 06070" loading="lazy" width="640" height="460">
     <div class="property-card-body">
