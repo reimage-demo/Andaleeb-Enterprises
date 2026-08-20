@@ -161,14 +161,15 @@ h1, h2, h3, p { margin-top: 0; }
 .amenity-band span { display: block; color: var(--brand-highlight); font-family: var(--font-display); font-style: normal; font-weight: 400; font-size: clamp(17px, 1.6vw, 21px); letter-spacing: .3px; }
 .image-banner { margin: 0 4vw; }
 .image-banner img { width: 100%; max-height: 560px; object-fit: cover; }
-.albany-collage { display: grid; grid-template-columns: 1.35fr 1fr 1fr; grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 14px; height: clamp(360px, 46vh, 500px); }
-.albany-collage figure { position: relative; min-width: 0; min-height: 0; margin: 0; overflow: hidden; background: var(--charcoal-dark); }
-.albany-collage .albany-collage-main { grid-row: 1 / 3; }
-.albany-collage .albany-collage-wide { grid-column: 2 / 4; }
-.albany-collage img { width: 100%; height: 100%; max-height: none; object-fit: cover; transition: transform .45s ease; }
-.albany-collage .albany-collage-magnolia img { object-position: center 54%; }
+.albany-collage { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; width: calc(100% - 8vw); height: auto; margin: 0 auto; }
+.albany-collage figure { display: flex; min-width: 0; min-height: 0; flex-direction: column; margin: 0; overflow: hidden; border: 1px solid var(--line); background: var(--paper); box-shadow: 0 12px 30px rgba(20,24,28,.09); }
+.albany-collage .albany-collage-main { grid-row: auto; }
+.albany-collage .albany-collage-wide { grid-column: auto; }
+.albany-collage img { width: 100%; height: auto; max-height: none; aspect-ratio: 16 / 9; object-fit: cover; transition: transform .45s ease; }
+.albany-collage .albany-collage-main img { object-position: center 48%; }
+.albany-collage .albany-collage-magnolia img { object-position: center 56%; }
 .albany-collage figure:hover img { transform: scale(1.025); }
-.albany-collage figcaption { position: absolute; left: 16px; bottom: 16px; padding: 9px 13px; border-left: 3px solid var(--accent); color: var(--white); background: rgba(41,45,48,.88); text-transform: uppercase; letter-spacing: 2px; font-size: 10px; font-weight: 700; }
+.albany-collage figcaption { position: static; padding: 15px 18px; border-top: 3px solid var(--accent); color: var(--ink); background: var(--paper); text-transform: uppercase; letter-spacing: 2px; font-size: 11px; font-weight: 700; }
 .women-banner img { object-position: center 18%; }
 .image-placeholder { width: 100%; aspect-ratio: 2.4; background: var(--soft); border: 1px dashed var(--line); }
 .tenant-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1640px; margin: 0 auto; }
@@ -251,10 +252,10 @@ h1, h2, h3, p { margin-top: 0; }
   .about-panel { width: calc(100% - 40px); margin: 56px auto; padding: 24px; }
   .before-after-media img { height: auto; min-height: 0; }
   .section-copy { max-width: none; justify-self: stretch; padding: 44px 8px 24px; }
-  .albany-collage { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; height: auto; }
-  .albany-collage .albany-collage-main { grid-column: 1 / -1; grid-row: auto; min-height: 380px; }
-  .albany-collage .albany-collage-wide { grid-column: 1 / -1; min-height: 260px; }
-  .albany-collage figure:not(.albany-collage-main):not(.albany-collage-wide) { min-height: 240px; }
+  .albany-collage { grid-template-columns: 1fr; gap: 20px; }
+  .albany-collage .albany-collage-main,
+  .albany-collage .albany-collage-wide { grid-column: auto; grid-row: auto; min-height: 0; }
+  .albany-collage figure:not(.albany-collage-main):not(.albany-collage-wide) { min-height: 0; }
   .detail-actions { flex-wrap: wrap; }
 }
 @media (max-width: 560px) {
@@ -280,11 +281,10 @@ h1, h2, h3, p { margin-top: 0; }
   .site-footer { text-align: left; gap: 30px; }
   .before-after-media { grid-template-columns: 1fr; }
   .before-after-media img { height: auto; min-height: 0; }
-  .albany-collage { grid-template-columns: 1fr; gap: 10px; margin: 0 20px; }
+  .albany-collage { grid-template-columns: 1fr; width: calc(100% - 40px); gap: 16px; margin: 0 auto; }
   .albany-collage .albany-collage-main,
   .albany-collage .albany-collage-wide,
-  .albany-collage figure:not(.albany-collage-main):not(.albany-collage-wide) { grid-column: auto; min-height: 230px; }
-  .albany-collage .albany-collage-main { min-height: 300px; }
+  .albany-collage figure:not(.albany-collage-main):not(.albany-collage-wide) { grid-column: auto; min-height: 0; }
 }
 
 .reveal > * { opacity: 0; transform: translateY(36px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); transition-delay: var(--reveal-delay, 0s); }
