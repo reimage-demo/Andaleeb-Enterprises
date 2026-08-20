@@ -170,13 +170,11 @@ h1, h2, h3, p { margin-top: 0; }
 .amenity-band span { display: block; color: #505659; font-family: inherit; font-style: normal; font-weight: 650; font-size: clamp(16px, 1.5vw, 20px); letter-spacing: 0; }
 .image-banner { margin: 0 4vw; }
 .image-banner img { width: 100%; max-height: 560px; object-fit: cover; }
-.albany-collage { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; width: calc(100% - 8vw); height: auto; margin: 0 auto; }
+.albany-collage { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; width: min(calc(100% - 8vw), 1000px); height: auto; margin: 0 auto; }
 .albany-collage figure { display: flex; min-width: 0; min-height: 0; flex-direction: column; margin: 0; overflow: hidden; border: 1px solid var(--line); background: var(--paper); box-shadow: 0 12px 30px rgba(20,24,28,.09); }
 .albany-collage .albany-collage-main { grid-row: auto; }
 .albany-collage .albany-collage-wide { grid-column: auto; }
-.albany-collage img { width: 100%; height: auto; max-height: none; aspect-ratio: 16 / 9; object-fit: cover; transition: transform .45s ease; }
-.albany-collage .albany-collage-main img { object-position: center 48%; }
-.albany-collage .albany-collage-magnolia img { object-position: center 56%; }
+.albany-collage img { width: 100%; height: auto; max-height: none; aspect-ratio: 16 / 9; object-fit: cover; object-position: center top; transition: transform .45s ease; }
 .albany-collage figure:hover img { transform: scale(1.025); }
 .albany-collage figcaption { position: static; padding: 15px 18px; border-top: 3px solid var(--accent); color: var(--ink); background: var(--paper); text-transform: uppercase; letter-spacing: 2px; font-size: 11px; font-weight: 700; }
 .women-banner img { object-position: center 18%; }
@@ -189,10 +187,10 @@ h1, h2, h3, p { margin-top: 0; }
 .tenant-card .outline-btn { margin-top: 18px; }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; max-width: 1400px; margin: 70px auto; padding: 0 4vw; }
 .text-heavy p { font-size: 21px; color: var(--muted); }
-.ownership-block { width: calc(100% - 8vw); max-width: 1180px; margin: 82px auto 96px; padding: 0; text-align: left; }
-.ownership-block h2 { max-width: 900px; margin-bottom: 30px; color: var(--ink); font-family: var(--font-display); font-weight: 400; font-size: clamp(30px, 3.6vw, 48px); }
-.ownership-copy { padding: 0; border: 0; border-radius: 0; background: transparent; text-align: left; }
-.ownership-copy p { max-width: 980px; font-size: clamp(18px, 1.6vw, 21px); line-height: 1.75; color: var(--ink); }
+.ownership-block { width: calc(100% - 8vw); max-width: 1180px; margin: 82px auto 96px; padding: 0; text-align: center; }
+.ownership-block h2 { max-width: 900px; margin: 0 auto 30px; color: var(--ink); font-family: var(--font-display); font-weight: 400; font-size: clamp(30px, 3.6vw, 48px); }
+.ownership-copy { padding: 0; border: 0; border-radius: 0; background: transparent; text-align: center; }
+.ownership-copy p { max-width: 980px; margin-right: auto; margin-left: auto; font-size: clamp(18px, 1.6vw, 21px); line-height: 1.75; color: var(--ink); }
 .ownership-copy p + p { margin-top: 22px; }
 .focus-copy { opacity: .45; transition: opacity .2s ease-out; }
 .strategy-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 80px 4vw; }
