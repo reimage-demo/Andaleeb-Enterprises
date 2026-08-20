@@ -13,40 +13,46 @@ const images = {
 
 const propertyMedia = {
   "magnolia-building": {
-    images: ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp"],
-    stages: ["Today", "Before", "Early work", "Reactivated", "Stabilized"],
-    captions: ["The Magnolia Building presents a renewed mixed-use frontage on Albany Avenue.", "The 2020 street view records the building before the multi-year improvement program.", "Storefront and façade work begins to reset the street-level experience.", "New glazing and active commercial bays bring transparency and activity back to the sidewalk.", "A consistent storefront line and occupied upper floors complete the block-scale transformation."],
-    story: ["Magnolia is a long-view revitalization story. Photos beginning in 2020 document an aging mixed-use building whose scale and location still made it important to Albany Avenue.", "The work progressed in practical phases—storefront openings, façade repairs, safer residential space, and renewed commercial visibility. Later images show a building that once read as tired and fragmented becoming a more coherent, active part of the corridor."]
+    images: ["08.webp", "exterior-aerial.jpg", "exterior-front.jpg", "02.webp", "06.webp", "03.webp", "07.webp", "04.webp", "09.webp", "10.webp", "11.webp", "05.webp"],
+    stages: ["Completed exterior", "Aerial exterior", "Street frontage", "Before", "Original frontage", "Storefront demolition", "New storefronts", "Apartment before", "Window restoration", "Kitchen installation", "Renovated kitchenette", "Apartment after"],
+    captions: ["The completed Magnolia exterior shows the full restored façade, continuous storefront system, awnings, windows, and renewed entrance.", "A real aerial photograph shows the entire Magnolia Building, its corner setting, parking, and surrounding Albany Avenue neighborhood.", "A straight-on photograph captures the complete restored frontage and storefronts without obstructions.", "The original frontage shows boarded openings and the starting condition of the rehabilitation.", "A full pre-renovation view records the mismatched storefronts and weathered street-level façade.", "Workers rebuild the storefront bays with the framing, masonry, and construction access fully exposed.", "New storefront openings, doors, and glazing begin to replace the boarded and enclosed bays.", "An apartment interior records the dated finishes and room condition before unit-level improvements.", "New window installation and unfinished trim document active work inside an apartment.", "Cabinets are set while counters, fixtures, and finish work are still in progress.", "A renovated kitchenette shows new counters, cabinetry, flooring, paint, and restored natural light.", "A completed apartment room shows renewed walls, trim, flooring, and a brighter residential interior."],
+    story: ["Magnolia is shown as a true before-and-after project, beginning with the distressed storefront and dated residential conditions behind it.", "The sequence moves through active storefront construction and into the apartments, then returns to the finished building. Together, the images show that the work was more than a façade update: it renewed both the public face of the property and the spaces tenants use every day."]
   },
   "weaver-building": {
-    images: ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp"],
-    stages: ["Street view", "Before", "Exterior renewal", "After", "Residential work"],
-    captions: ["Weaver's long façade anchors a prominent stretch of Albany Avenue.", "An earlier view preserves the starting condition of the mixed-use frontage.", "A brighter, unified façade makes the full building read as one address.", "Completed storefront and exterior work restores a strong rhythm along the sidewalk.", "Interior improvements extend the renewal from the street into the residential units."],
-    story: ["The Weaver Building is a corridor-scale project: 24 mixed-use spaces arranged behind one of the portfolio's longest Albany Avenue façades.", "The photo record follows the building from an uneven earlier presentation to a brighter, unified storefront line, then inside to residential improvements. The result is not one cosmetic moment, but a sustained program of exterior, common-area, and unit-level work." ]
+    images: ["01.webp", "02.webp", "03.webp", "06.webp", "07.webp", "04.webp", "08.webp", "09.webp", "10.webp", "11.webp", "05.webp"],
+    stages: ["Street view", "Kitchen rough-in", "Corridor rebuild", "Walls and trim", "Flooring installation", "Cabinet installation", "Kitchen finishing", "Restored entry", "Finished bedroom", "Finished kitchen", "Completed apartment"],
+    captions: ["The Weaver Building's long mixed-use façade establishes the scale of the property on Albany Avenue.", "Opened walls and exposed utility connections document the kitchen rough-in stage.", "A residential corridor is rebuilt with new drywall while floor and finish work remain underway.", "Freshly repaired walls and new trim show the apartment taking shape before final electrical work.", "Crews install new flooring through the hall while the doorways and fixtures remain unfinished.", "New cabinets and counters are installed while construction materials are still visible.", "The kitchen advances with finished cabinetry, counters, tile flooring, and final connections still underway.", "The restored common entry preserves the patterned floor and arched doorway while renewing lighting and finishes.", "A finished bedroom shows new carpet, paint, trim, doors, and lighting.", "The completed kitchen adds appliances and a clean, durable finish throughout.", "The completed apartment brings together the kitchen, appliances, flooring, and living area."],
+    story: ["Weaver's story continues past its street presence and into the residential units. The gallery follows actual interior work from utility rough-in and corridor reconstruction through cabinet installation.", "The final apartment view makes the progression clear: worn and opened-up interiors were rebuilt into functional, finished homes while the large mixed-use building remained an anchor on the corridor."]
   },
   "governors-building": {
-    images: ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp"],
-    stages: ["Signature view", "West approach", "Main Street corner", "Full frontage", "Neighborhood context"],
-    captions: ["The Governor's Building seen from its defining three-quarter corner.", "Aerial photography shows the building's scale, parking, and surrounding street network.", "The rounded corner entrance establishes a clear Main Street presence.", "The full commercial frontage creates a continuous edge along the block.", "A wider view places the property within downtown East Hartford."],
+    images: ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp"],
+    stages: ["Signature view", "West approach", "Main Street corner", "Full frontage", "Neighborhood context", "Rear and roof", "Downtown connection"],
+    captions: ["The Governor's Building seen from its defining three-quarter corner.", "Aerial photography shows the building's scale, parking, and surrounding street network.", "The rounded corner entrance establishes a clear Main Street presence.", "The full commercial frontage creates a continuous edge along the block.", "A wider view places the property within downtown East Hartford.", "A high rear view documents the roof, service access, parking, and full depth of the property.", "The final aerial connects the building's Main Street frontage to the Hartford skyline beyond."],
     story: ["At the Governor's Building, the architecture already tells the story: a substantial commercial property with a memorable corner entrance and a long, visible Main Street frontage.", "The aerial sequence shows how the building meets the intersection, connects to parking, and contributes to the surrounding downtown fabric. Its value comes from both the spaces inside and the strong civic presence it holds at street level."]
   },
   "restaurant-building": {
-    images: ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp"],
-    stages: ["Today", "Before", "Improvement phase", "New storefront", "Finished frontage"],
-    captions: ["The Restaurant Building now presents a crisp, transparent storefront to Albany Avenue.", "The earlier condition shows a more enclosed and visually uneven street frontage.", "A transitional view records repairs and preparation around the commercial bays.", "New glazing opens the interior to the sidewalk and strengthens the entrance sequence.", "The completed frontage reads as one welcoming neighborhood-facing commercial space."],
-    story: ["This compact building shows how targeted storefront work can change the way a property meets its neighborhood. The earlier façade was more enclosed and visually uneven.", "Later photos show a clearer entrance, broad new glazing, and a more consistent commercial frontage. Those changes make the space easier to see, easier to approach, and better suited to a neighborhood restaurant or service tenant." ]
+    images: ["01.webp", "06.webp", "02.webp", "07.webp", "08.webp", "03.webp", "04.webp", "05.webp", "09.webp"],
+    stages: ["Before", "Pre-construction", "Design direction", "Proposed storefront", "Envelope work", "Building work", "Completed storefront", "Street context", "Finished sidewalk"],
+    captions: ["The original frontage was boarded, enclosed, and disconnected from the activity along Albany Avenue.", "A side-angle view records the building and street frontage before the new commercial façade was installed.", "The project design study establishes the intended glazing, entrances, and awning rhythm before construction.", "A closer rendering defines the proposed storefront proportions and entrance placement.", "Work along the side wall and roof edge documents repairs to the exterior envelope.", "A construction-period view records additional work on the rear wall, roof edge, and masonry.", "The completed storefront replaces the boarded bays with broad glazing, new entrances, brickwork, and metal awnings.", "A wider completed view shows how the renewed storefront now participates in the surrounding commercial corridor.", "The finished glazing and storefront frame are seen from the rebuilt sidewalk edge looking down Albany Avenue."],
+    story: ["The Restaurant Building gallery starts with the boarded storefront, then shows the design intent and a less polished construction-period view of the building envelope.", "The completed photographs return to the same property with transparent storefront bays and a clearer entrance sequence. No interior construction photographs were available in this folder, so the story stays focused on the exterior work that is actually documented."]
   },
   "winton-building": {
-    images: ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp"],
-    stages: ["Signature view", "Front approach", "Campus context", "Main entrance", "Full site"],
-    captions: ["Winton's three-wing composition is clearest from this elevated three-quarter view.", "The front approach shows the building's balanced façade and central entrance.", "A wider aerial establishes the property's landscaped commercial setting.", "The entrance court gives tenants and visitors a clear point of arrival.", "The full-site view documents circulation, parking, and the building's generous footprint."],
-    story: ["Winton is a different kind of asset from the urban storefront buildings in the portfolio. Its broad, three-wing plan sits in a landscaped commercial setting in Bloomfield.", "The aerial series is used deliberately here: each view explains arrival, parking, circulation, and the building's substantial footprint while keeping the same architectural orientation. Interior images can support leasing, but the exterior sequence best communicates the property as a complete place." ]
+    images: ["01.webp", "06.webp", "02.webp", "09.webp", "03.webp", "07.webp", "08.webp", "04.webp", "10.webp", "05.webp", "11.webp"],
+    stages: ["Exterior", "Full property", "Vacant suite", "Existing office", "Common areas", "Elevator", "Shared restroom", "Renovated suite", "Second renovated suite", "Occupied office", "Office in use"],
+    captions: ["An elevated exterior view establishes Winton's broad footprint and wooded commercial setting.", "A second aerial shows the complete front elevation, entrance walk, parking, and surrounding site.", "A vacant office suite records the interior condition before tenant improvements and furnishing.", "An existing office documents the darker flooring, ceiling, and finishes found in an unimproved suite.", "The renewed lobby and elevator approach show the work carried into shared circulation spaces.", "The updated elevator and tiled landing provide a clean arrival between floors.", "A refreshed shared restroom extends the flooring and paint improvements into support spaces.", "A completed office suite presents updated walls, flooring, lighting, and a flexible professional layout.", "A second renovated suite shows the new resilient flooring and brighter neutral finish palette.", "An occupied office shows the finished space in daily use rather than as an empty real-estate shell.", "A furnished private office completes the sequence with a practical example of the building in use."],
+    story: ["Winton's gallery now moves from the full property into the spaces where tenants work. A vacant suite provides the starting point, followed by improved common areas and completed offices.", "The final occupied interior makes the result tangible: the project is not only a building viewed from above, but a functioning workplace with renewed shared areas and usable private suites."]
   },
   "uptown-building": {
-    images: ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp"],
-    stages: ["Current exterior", "Starting point", "Selective demolition", "Rebuilt openings", "Active renovation"],
-    captions: ["Uptown's masonry shell and corner storefront define the project from the street.", "The 2024 exterior records the building before the current renovation sequence.", "Interior demolition exposes the original structure and makes room for new building systems.", "Later work reframes the storefront and prepares a more open street-level frontage.", "The latest view keeps the transformation visible while construction continues."],
-    story: ["Uptown is presented as work in progress, not a finished reveal. The 2024 images establish a solid masonry shell with a prominent corner storefront and significant deferred interior work.", "The sequence then moves through selective demolition, exposed framing, system rough-ins, and reconstructed street-level openings. Keeping those stages visible makes the story honest: this is the careful middle of a transformation, with the building's original character retained while its next use is built inside." ]
+    images: ["01.webp", "06.webp", "02.webp", "07.webp", "03.webp", "08.webp", "04.webp", "05.webp"],
+    stages: ["Latest exterior", "Interior demolition", "Remediation", "Stripped structure", "Interior framing", "Systems rough-in", "Storefront reconstruction", "New glazing"],
+    captions: ["The latest full exterior shows the masonry building and the current state of the corner renovation.", "Removed plaster and lath document the difficult demolition work required to reach the original structure.", "A remediation worker inside the stripped building records the preparation needed before rebuilding could begin.", "The opened floor reveals the original studs, lath, and accumulated demolition debris before reconstruction.", "New interior framing is built within the exposed brick shell as rooms and building systems take shape.", "Open ceilings, structural members, piping, and new framing show the rough-in phase before finishes.", "The street-level openings remain boarded while the storefront structure is actively rebuilt.", "Green exterior sheathing and new black storefront frames mark visible progress toward a more open commercial frontage."],
+    story: ["Uptown remains an active renovation, so the gallery does not present a false finished reveal. It begins with the latest exterior, then moves back inside to remediation and structural framing.", "The last two views return to the street as boarded openings give way to new sheathing and glazing frames. The sequence shows measurable progress while making clear that the project is still underway."]
+  },
+  "ten-mill-pond-lane": {
+    images: ["01.webp", "02.webp", "06.webp", "07.webp", "03.webp", "08.webp", "09.webp", "04.webp", "10.webp", "05.webp", "11.webp"],
+    stages: ["Exterior", "Reception", "Workstation office", "Conference room", "Private office", "Open office", "Fireplace workspace", "Workroom", "Executive office", "Team office", "Office corridor"],
+    captions: ["Aerial photography shows the building's full office footprint in its wooded Simsbury setting.", "The reception area creates a warm, professional arrival with wood detailing and natural light.", "A long workstation office demonstrates the built-in furniture and window line available to a small team.", "The conference room combines a full meeting table, perimeter storage, and broad wooded views.", "A finished private office demonstrates the scale, windows, and move-in-ready condition of individual suites.", "An open office area shows the exposed timber roof structure and flexible workstation layout.", "A stone fireplace and timber ceiling give one collaborative workspace a distinctive focal point.", "A bright workroom shows flexible space for production, meetings, or collaborative work.", "A finished executive office adds built-in storage, a whiteboard wall, and natural light.", "An occupied team office shows how the workplace functions in daily use.", "The final interior view follows the glass-lined corridor connecting the individual offices."],
+    story: ["The available Mill Pond photography documents a completed workplace rather than a construction sequence. The gallery therefore moves honestly from the exterior into reception, private offices, and shared work areas.", "Together, the images show the range of finished interior environments inside the property and give prospective tenants a much clearer sense of the building than the exterior image alone."]
   }
 };
 
@@ -82,6 +88,42 @@ const propertyTours = {
     { url: matterport("H9MjMyB9oe1"), label: "3 East Main Street, Unit 1" }
   ],
   "five-seven-east-main": [{ url: matterport("CjUp2xGgvA4"), label: "5 East Main Street" }]
+};
+
+const propertyPrimaryImages = {
+  "690-albany-avenue": "assets/images/properties/690-albany-avenue/01.jpg",
+  "895-albany-avenue": "assets/images/properties/895-albany-avenue/01.jpg",
+  "907-albany-avenue": "assets/images/properties/907-albany-avenue/01.jpg",
+  "919-albany-avenue": "assets/images/properties/919-albany-avenue/01.jpg",
+  "tinker-building": "assets/images/properties/tinker-building/01.jpg",
+  "post-office-building": "assets/images/properties/post-office-building/01.jpg",
+  "sullivan-avenue-portfolio": "assets/images/properties/sullivan-avenue-portfolio/01.webp",
+  "boat-club-building": "assets/images/properties/boat-club-building/01.jpg",
+  "five-seven-east-main": "assets/images/properties/five-seven-east-main/01.jpg",
+  "143-edgewood-street": "assets/images/properties/143-edgewood-street/01.jpg",
+  "65-beelzebub-road": "assets/images/properties/65-beelzebub-road/01.jpg",
+  "20-highland-park": "assets/images/properties/20-highland-park/01.jpg",
+  "258-farmington-avenue": "assets/images/properties/258-farmington-avenue/01.jpg",
+  "455-farmington-avenue": "assets/images/properties/455-farmington-avenue/01.jpg",
+  "affleck-building": "assets/images/properties/affleck-building/01.jpg",
+  "eternity-building": "assets/images/properties/eternity-building/01.jpg",
+  "696-714-albany-avenue": "assets/images/properties/696-714-albany-avenue/01.jpg",
+  "terry-square-plaza": "assets/images/properties/terry-square-plaza/01.jpg",
+  "merchant-association": "assets/images/properties/merchant-association/01.jpg",
+  "885-albany-avenue": "assets/images/properties/885-albany-avenue/01.jpg",
+  "ten-mill-pond-lane": "assets/images/home/10-mill-pond-lane.jpg"
+};
+
+const propertyMeasurements = {
+  "690-albany-avenue": { siteAcres: 0.28, grossSqFt: 2858, netSqFt: 2858 },
+  "907-albany-avenue": { siteAcres: 0.19, grossSqFt: 6940, netSqFt: 6150 },
+  "919-albany-avenue": { siteAcres: 0.21, grossSqFt: 6528, netSqFt: 6528 },
+  "143-edgewood-street": { siteAcres: 0.17, grossSqFt: 6416, netSqFt: 6056 },
+  "65-beelzebub-road": { siteAcres: 0.72, grossSqFt: 3235, netSqFt: 1344 },
+  "20-highland-park": { siteAcres: 0.12, grossSqFt: 3162, netSqFt: 1425 },
+  "258-farmington-avenue": { grossSqFt: 3300, netSqFt: 1650 },
+  "696-714-albany-avenue": { siteAcres: 0.14, grossSqFt: 15123, netSqFt: 10572 },
+  "885-albany-avenue": { siteAcres: 0.21, grossSqFt: 2420, netSqFt: 2420 }
 };
 
 const AE = {
@@ -124,12 +166,16 @@ const AE = {
     ["terry-square-plaza", "2739 Main Street, Hartford, CT", "Terry Square plaza", "2739 Main Street", "Hartford, CT", "Commercial · Retail Space", "7", 750000, "100%", "Stabilized"],
     ["merchant-association", "1108 Albany Avenue, Hartford, CT 06112", "The Merchant Association LLC", "1108 Albany Avenue", "Hartford, CT", "Commercial · Office Space", "1", 365000, "100%", "Stabilized"],
     ["885-albany-avenue", "885 Albany Avenue, Hartford, CT 06112", "885 Albany Avenue LLC", "885 Albany Avenue", "Hartford, CT", "Commercial · Retail Space", "1", 350000, "100%", "Stabilized"],
-    ["ten-mill-pond-lane", "10 Mill Pond Lane, Simsbury, CT 06070", "Ten Mill Pond Lane LLC", "10 Mill Pond Lane", "Simsbury, CT", "Commercial · Retail Space", "TBD", 0, "100%", "Closing in progress"]
+    ["ten-mill-pond-lane", "10 Mill Pond Lane, Simsbury, CT 06070", "Ten Mill Pond Lane LLC", "10 Mill Pond Lane", "Simsbury, CT", "Commercial · Office Space", "TBD", 0, "100%", "Closing in progress"]
   ].map((p, index) => {
     const typeKey = p[5].includes("Residential") ? "residential" : p[5].includes("Multi") ? "mixed" : "commercial";
     const commercialType = typeKey === "commercial" ? (p[5].includes("Office") ? "office" : "retail") : null;
     const media = propertyMedia[p[0]];
-    const imgSet = media ? media.images.map(file => `assets/images/properties/${p[0]}/${file}`) : [images[typeKey], images.street, images.restoration, images.lobby, images.brick];
+    const imgSet = media
+      ? media.images.map(file => file.startsWith("assets/") ? file : `assets/images/properties/${p[0]}/${file}`)
+      : propertyPrimaryImages[p[0]]
+        ? [propertyPrimaryImages[p[0]]]
+        : [images[typeKey], images.street, images.restoration, images.lobby, images.brick];
     return {
       id: index + 1,
       slug: p[0],
@@ -144,19 +190,23 @@ const AE = {
       value: p[7],
       owned: p[8],
       status: p[9],
+      ...propertyMeasurements[p[0]],
       images: imgSet,
       stages: media?.stages || [],
       captions: media?.captions || [],
       story: media?.story || [],
       tours: propertyTours[p[0]] || [],
-      featured: ["magnolia-building", "weaver-building", "696-714-albany-avenue", "governors-building"].includes(p[0])
+      heroVideo: p[0] === "sullivan-avenue-portfolio" ? "assets/video/drone-buildings-hero.mp4" : null,
+      featured: ["post-office-building", "ten-mill-pond-lane", "magnolia-building"].includes(p[0])
     };
   }),
   news: [
-    ["albany-avenue-40-apartments", "Hartford Seeks to Transform Blighted Albany Avenue Site Into 40 Apartments With Retail", "December 14, 2022", "Hartford Business Journal", "The city of Hartford selected Andaleeb Enterprises to redevelop a long-vacant, fire-damaged site on Albany Avenue into 40 apartments and 3,000 square feet of retail space.", "https://hartfordbusiness.com/article/hartford-seeks-to-transform-blighted-albany-avenue-site-into-40-apartments-with-retail/"],
-    ["governors-building-acquisition", "Prominent Downtown East Hartford Mixed-Use Office Building Sells to Realty Investor Active in Neighboring Hartford", "January 4, 2024", "Hartford Business Journal", "Governor's Building LLC, an entity tied to Andaleeb principal Kavita Ahmed, acquired the 18,527-square-foot “Governor's Corner” building in downtown East Hartford for $750,000.", "https://hartfordbusiness.com/article/prominent-downtown-east-hartford-mixed-use-office-building-sells-to-realty-investor-active/"],
+    ["south-windsor-colony-complex-sale", "Five-Building Retail-Office Complex in South Windsor Fetches $2M", "August 27, 2024", "Hartford Business Journal", "The Kavita Ahmed Family Trust purchased the five-building Colony Shopping Complex at 942 Sullivan Avenue in South Windsor for $2 million, adding to the family's portfolio of Hartford-area retail and apartment properties.", "https://hartfordbusiness.com/article/five-building-retail-office-complex-in-south-windsor-fetches-2m/"],
     ["albany-avenue-vacant-storefronts-zoning", "Eager to Fill Vacant Storefronts, Hartford Seeks to Allow Office Space in First-Floor Mixed-Use Properties", "March 5, 2024", "Hartford Business Journal", "A proposed Hartford zoning change would allow first-floor office use in mixed-use buildings along key commercial corridors, including Andaleeb's own property at 919 Albany Avenue, to help fill vacant storefronts.", "https://hartfordbusiness.com/article/eager-to-fill-vacant-storefronts-hartford-seeks-to-allow-office-space-in-first-floor-mixed/"],
-    ["south-windsor-colony-complex-sale", "Five-Building Retail-Office Complex in South Windsor Fetches $2M", "August 27, 2024", "Hartford Business Journal", "The Kavita Ahmed Family Trust purchased the five-building Colony Shopping Complex at 942 Sullivan Avenue in South Windsor for $2 million, adding to the family's portfolio of Hartford-area retail and apartment properties.", "https://hartfordbusiness.com/article/five-building-retail-office-complex-in-south-windsor-fetches-2m/"]
+    ["governors-building-acquisition", "Prominent Downtown East Hartford Mixed-Use Office Building Sells to Realty Investor Active in Neighboring Hartford", "January 4, 2024", "Hartford Business Journal", "Governor's Building LLC, an entity tied to Andaleeb principal Kavita Ahmed, acquired the 18,527-square-foot “Governor's Corner” building in downtown East Hartford for $750,000.", "https://hartfordbusiness.com/article/prominent-downtown-east-hartford-mixed-use-office-building-sells-to-realty-investor-active/"],
+    ["courant-albany-avenue", "On One of This CT City’s Busiest Thoroughfares, a Developer Snaps Up Properties. Here’s the Plan", "September 11, 2023", "Hartford Courant", "A Connecticut real estate company is acquiring aging mixed-use buildings, renovating upper-floor apartments, and improving façades and storefronts along Albany Avenue.", "https://www.courant.com/2023/09/11/on-one-of-this-ct-citys-busiest-thoroughfares-a-developer-snaps-up-properties-heres-the-plan/"],
+    ["amber-ace-andaleeb", "2023 Power 25 Real Estate: Amber “Ace” Andaleeb", "June 12, 2023", "Hartford Business Journal", "Hartford Business Journal profiles Amber “Ace” Andaleeb and the family-owned real estate company’s active investment and revitalization work in the capital city.", "https://hartfordbusiness.com/honoree/amber-ace-andaleeb/"],
+    ["albany-avenue-40-apartments", "Hartford Seeks to Transform Blighted Albany Avenue Site Into 40 Apartments With Retail", "December 14, 2022", "Hartford Business Journal", "The city of Hartford selected Andaleeb Enterprises to redevelop a long-vacant, fire-damaged site on Albany Avenue into 40 apartments and 3,000 square feet of retail space.", "https://hartfordbusiness.com/article/hartford-seeks-to-transform-blighted-albany-avenue-site-into-40-apartments-with-retail/"]
   ],
   caseStudies: [
     ["magnolia-building", "635-651 Albany Avenue, Hartford, CT 06112", "Vacancy to mixed-use momentum", "A distressed Albany Avenue building repositioned with practical improvements and a tenant-first affordability strategy."],

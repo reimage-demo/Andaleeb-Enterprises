@@ -14,56 +14,51 @@ if (topButton) {
 }
 
 const topFilters = document.querySelectorAll("[data-filter]");
-const subFilterSection = document.querySelector("[data-sub-filters]");
-const subFilters = document.querySelectorAll("[data-subfilter]");
 const propertyCards = document.querySelectorAll(".property-card");
 if (topFilters.length) {
-  let activeTop = "all";
-  let activeSub = "all";
-  const applyFilters = () => {
-    propertyCards.forEach((card) => {
-      let show = activeTop === "all" || card.dataset.category === activeTop;
-      if (show && activeTop === "commercial" && activeSub !== "all") show = card.dataset.subtype === activeSub;
-      card.hidden = !show;
-    });
-  };
   topFilters.forEach((filter) => {
     filter.addEventListener("click", (event) => {
       event.preventDefault();
-      activeTop = filter.dataset.filter;
-      activeSub = "all";
+      const activeFilter = filter.dataset.filter;
       topFilters.forEach((item) => item.classList.remove("active"));
       filter.classList.add("active");
-      if (subFilterSection) {
-        subFilterSection.hidden = activeTop !== "commercial";
-        subFilters.forEach((item) => item.classList.toggle("active", item.dataset.subfilter === "all"));
-      }
-      applyFilters();
-    });
-  });
-  subFilters.forEach((filter) => {
-    filter.addEventListener("click", (event) => {
-      event.preventDefault();
-      activeSub = filter.dataset.subfilter;
-      subFilters.forEach((item) => item.classList.remove("active"));
-      filter.classList.add("active");
-      applyFilters();
+      propertyCards.forEach((card) => {
+        card.hidden = activeFilter !== "all" && card.dataset.category !== activeFilter;
+      });
     });
   });
 }
 
 const detailHero = document.querySelector(".detail-hero > img");
-document.querySelectorAll("[data-gallery-image]").forEach((button) => {
+const galleryButtons = document.querySelectorAll("[data-gallery-image]");
+galleryButtons[0]?.classList.add("active");
+galleryButtons.forEach((button) => {
   button.addEventListener("click", () => {
     if (!detailHero) return;
     detailHero.src = button.dataset.galleryImage;
     detailHero.alt = button.dataset.galleryAlt;
-    document.querySelectorAll("[data-gallery-image]").forEach(item => item.classList.remove("active"));
+    detailHero.closest(".detail-hero")?.classList.add("show-detail-image");
+    galleryButtons.forEach(item => item.classList.remove("active"));
     button.classList.add("active");
   });
 });
 
-const revealTargets = document.querySelectorAll(".reveal");
+const splitReveal = document.querySelector(".about-panel");
+if (splitReveal) splitReveal.classList.add("scroll-reveal", "split-reveal");
+
+document.querySelectorAll(".section-title, .page-title, .filters, .tenant-band > .eyebrow, .tenant-band > h2, .tenant-logo-row, .section > .center, .news-band > .center").forEach((target) => {
+  target.classList.add("scroll-reveal");
+});
+
+document.querySelectorAll(".feature-grid, .case-grid, .news-grid, .property-grid").forEach((grid) => {
+  const columns = grid.classList.contains("property-grid") ? 4 : 3;
+  Array.from(grid.children).forEach((target, index) => {
+    target.classList.add("scroll-reveal");
+    target.style.setProperty("--reveal-delay", `${(index % columns) * 0.09}s`);
+  });
+});
+
+const revealTargets = document.querySelectorAll(".reveal, .scroll-reveal");
 if (revealTargets.length) {
   if ("IntersectionObserver" in window) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -73,7 +68,7 @@ if (revealTargets.length) {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.2, rootMargin: "0px 0px -10% 0px" });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
     revealTargets.forEach((target) => revealObserver.observe(target));
   } else {
     revealTargets.forEach((target) => target.classList.add("is-visible"));
@@ -105,34 +100,14 @@ const attachScrollFocus = (elements, apply, maxDistRatio = 0.65) => {
   update();
 };
 
-attachScrollFocus(document.querySelectorAll(".tenant-logo"), (el, focus) => {
-  el.style.opacity = (0.35 + 0.65 * focus).toFixed(3);
-  el.style.filter = `grayscale(${(1 - focus).toFixed(3)})`;
-});
-
 attachScrollFocus(document.querySelectorAll(".focus-copy"), (el, focus) => {
   el.style.opacity = (0.45 + 0.55 * focus).toFixed(3);
 });
 
 const heroVideo = document.querySelector("[data-hero-video]");
 const heroVideoToggle = document.querySelector("[data-hero-video-toggle]");
-if (heroVideo) {
-  heroVideo.addEventListener("ended", () => {
-    heroVideo.closest(".home-hero")?.classList.add("video-finished");
-    heroVideo.closest(".home-hero")?.querySelector(".hero-content")?.setAttribute("aria-hidden", "false");
-    heroVideoToggle?.classList.add("is-paused");
-    heroVideoToggle?.setAttribute("aria-label", "Replay hero video");
-    heroVideoToggle?.setAttribute("aria-pressed", "true");
-  });
-}
-
 if (heroVideo && heroVideoToggle) {
   heroVideoToggle.addEventListener("click", () => {
-    if (heroVideo.ended) {
-      heroVideo.currentTime = 0;
-      heroVideo.closest(".home-hero")?.classList.remove("video-finished");
-      heroVideo.closest(".home-hero")?.querySelector(".hero-content")?.setAttribute("aria-hidden", "true");
-    }
     if (heroVideo.paused) {
       heroVideo.play();
       heroVideoToggle.classList.remove("is-paused");
