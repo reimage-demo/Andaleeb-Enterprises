@@ -111,9 +111,11 @@ h1, h2, h3, p { margin-top: 0; }
 .page-title { margin: 54px 4vw 30px; padding: 44px; background: var(--charcoal); color: var(--white); text-align: center; }
 .page-title h1 { margin: 0; text-transform: uppercase; letter-spacing: 12px; font-family: var(--font-display); font-weight: 400; font-size: clamp(30px, 4vw, 50px); }
 .filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 0; padding: 8px 4vw 34px; }
-.filters a { padding: 12px 24px; border-right: 1px solid var(--line); color: var(--muted); }
+.filters a { position: relative; padding: 12px 24px; border-right: 1px solid var(--line); color: var(--muted); }
 .filters a:last-child { border-right: 0; }
-.filters a.active, .filters a:hover { color: var(--brand); border-bottom: 2px solid var(--accent); }
+.filters a.active, .filters a:hover { color: var(--brand); }
+.filters a::after { content: ""; position: absolute; left: 50%; bottom: 0; width: 75%; height: 2px; background: transparent; transform: translateX(-50%); }
+.filters a.active::after, .filters a:hover::after { background: var(--accent); }
 .property-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; padding: 0 4vw 80px; }
 .property-card { border: 1px solid var(--accent); background: var(--brand-soft); text-align: center; min-height: 100%; }
 .property-card[hidden] { display: none; }
