@@ -1,15 +1,35 @@
 const toggle = document.querySelector("[data-menu-toggle]");
 const nav = document.querySelector("[data-nav]");
 if (toggle && nav) {
+  const setMenuOpen = (open) => {
+    nav.classList.toggle("open", open);
+    toggle.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+  };
+
   toggle.addEventListener("click", () => {
-    nav.classList.toggle("open");
-    toggle.classList.toggle("open");
+    setMenuOpen(!nav.classList.contains("open"));
+  });
+
+  nav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) setMenuOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && nav.classList.contains("open")) {
+      setMenuOpen(false);
+      toggle.focus();
+    }
   });
 }
 
 const topButton = document.querySelector("[data-top]");
 if (topButton) {
-  topButton.addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
+  topButton.addEventListener("click", () => scrollTo({
+    top: 0,
+    behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+  }));
   addEventListener("scroll", () => topButton.classList.toggle("visible", scrollY > 700), { passive: true });
 }
 
@@ -107,17 +127,23 @@ attachScrollFocus(document.querySelectorAll(".focus-copy"), (el, focus) => {
 const heroVideo = document.querySelector("[data-hero-video]");
 const heroVideoToggle = document.querySelector("[data-hero-video-toggle]");
 if (heroVideo && heroVideoToggle) {
+  const setHeroVideoState = (paused) => {
+    heroVideoToggle.classList.toggle("is-paused", paused);
+    heroVideoToggle.setAttribute("aria-label", paused ? "Play hero video" : "Pause hero video");
+    heroVideoToggle.setAttribute("aria-pressed", String(paused));
+  };
+
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    heroVideo.pause();
+    setHeroVideoState(true);
+  }
+
   heroVideoToggle.addEventListener("click", () => {
     if (heroVideo.paused) {
-      heroVideo.play();
-      heroVideoToggle.classList.remove("is-paused");
-      heroVideoToggle.setAttribute("aria-label", "Pause hero video");
-      heroVideoToggle.setAttribute("aria-pressed", "false");
+      heroVideo.play().then(() => setHeroVideoState(false)).catch(() => setHeroVideoState(true));
     } else {
       heroVideo.pause();
-      heroVideoToggle.classList.add("is-paused");
-      heroVideoToggle.setAttribute("aria-label", "Play hero video");
-      heroVideoToggle.setAttribute("aria-pressed", "true");
+      setHeroVideoState(true);
     }
   });
 }

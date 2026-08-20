@@ -9,18 +9,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap">
-  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../styles.css?v=2c69444b9b">
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <a class="brand" href="../../" aria-label="Andaleeb Enterprises home"><img src="../../assets/images/andaleeb-wordmark.png" width="1400" height="201" alt="Andaleeb"></a>
-  <button class="menu-toggle" type="button" aria-label="Open navigation" data-menu-toggle><span></span><span></span><span></span></button>
-  <nav class="main-nav" data-nav>
+  <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span></button>
+  <nav class="main-nav" id="primary-navigation" aria-label="Primary navigation" data-nav>
     <a class="" href="../../about/">About</a><a class="active" href="../../properties/">Properties</a><a class="" href="../../news/">News</a><a class="" href="../../women-empowered/">Women Empowered</a><a class="" href="../../contact/">Contact</a>
   </nav>
 </header>
-<main>
+<main id="main-content" tabindex="-1">
 <section class="detail-hero">
   <img src="../../assets/images/properties/455-farmington-avenue/01.jpg" alt="455 Farmington Avenue, Hartford" width="1800" height="980" fetchpriority="high">
   
@@ -87,9 +88,16 @@
     <a href="mailto:info@adaleebenterprises.com">info@adaleebenterprises.com</a>
     <p>Hartford</p>
   </div>
-  <small class="footer-bottom">Copyright © 2026 Andaleeb Enterprises. All Rights Reserved.</small>
+  <div class="footer-bottom">
+    <small>Copyright © 2026 Andaleeb Enterprises. All Rights Reserved.</small>
+    <nav class="footer-legal" aria-label="Legal and accessibility">
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../accessibility/">Accessibility</a>
+    </nav>
+  </div>
 </footer>
 <button class="to-top" type="button" aria-label="Back to top" data-top>↑</button>
-<script src="../../assets/site.js" defer></script>
+<script src="../../assets/site.js?v=795ff889c8" defer></script>
 </body>
 </html>
