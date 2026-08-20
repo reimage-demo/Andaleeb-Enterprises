@@ -93,7 +93,7 @@ const propertyTours = {
 const propertyPrimaryImages = {
   "690-albany-avenue": "assets/images/properties/690-albany-avenue/01.jpg",
   "895-albany-avenue": "assets/images/properties/895-albany-avenue/01.jpg",
-  "907-albany-avenue": "assets/images/properties/907-albany-avenue/01.jpg",
+  "907-albany-avenue": "assets/images/properties/907-albany-avenue/01-no-cars.jpg",
   "919-albany-avenue": "assets/images/properties/919-albany-avenue/01.jpg",
   "tinker-building": "assets/images/properties/tinker-building/01.jpg",
   "post-office-building": "assets/images/properties/post-office-building/01.jpg",
