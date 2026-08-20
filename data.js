@@ -43,7 +43,7 @@ const propertyMedia = {
     story: ["Winton's gallery now moves from the full property into the spaces where tenants work. A vacant suite provides the starting point, followed by improved common areas and completed offices.", "The final occupied interior makes the result tangible: the project is not only a building viewed from above, but a functioning workplace with renewed shared areas and usable private suites."]
   },
   "uptown-building": {
-    images: ["01.webp", "06.webp", "02.webp", "07.webp", "03.webp", "08.webp", "04.webp", "05.webp"],
+    images: ["01-spring-edit.webp", "06.webp", "02.webp", "07.webp", "03.webp", "08.webp", "04.webp", "05.webp"],
     stages: ["Latest exterior", "Interior demolition", "Remediation", "Stripped structure", "Interior framing", "Systems rough-in", "Storefront reconstruction", "New glazing"],
     captions: ["The latest full exterior shows the masonry building and the current state of the corner renovation.", "Removed plaster and lath document the difficult demolition work required to reach the original structure.", "A remediation worker inside the stripped building records the preparation needed before rebuilding could begin.", "The opened floor reveals the original studs, lath, and accumulated demolition debris before reconstruction.", "New interior framing is built within the exposed brick shell as rooms and building systems take shape.", "Open ceilings, structural members, piping, and new framing show the rough-in phase before finishes.", "The street-level openings remain boarded while the storefront structure is actively rebuilt.", "Green exterior sheathing and new black storefront frames mark visible progress toward a more open commercial frontage."],
     story: ["Uptown remains an active renovation, so the gallery does not present a false finished reveal. It begins with the latest exterior, then moves back inside to remediation and structural framing.", "The last two views return to the street as boarded openings give way to new sheathing and glazing frames. The sequence shows measurable progress while making clear that the project is still underway."]
@@ -91,7 +91,7 @@ const propertyTours = {
 };
 
 const propertyPrimaryImages = {
-  "690-albany-avenue": "assets/images/properties/690-albany-avenue/01.jpg",
+  "690-albany-avenue": "assets/images/properties/690-albany-avenue/01-no-cars.jpg",
   "895-albany-avenue": "assets/images/properties/895-albany-avenue/01.jpg",
   "907-albany-avenue": "assets/images/properties/907-albany-avenue/01-no-cars.jpg",
   "919-albany-avenue": "assets/images/properties/919-albany-avenue/01.jpg",
@@ -196,7 +196,7 @@ const AE = {
       captions: media?.captions || [],
       story: media?.story || [],
       tours: propertyTours[p[0]] || [],
-      heroVideo: p[0] === "sullivan-avenue-portfolio" ? "assets/video/drone-buildings-hero.mp4" : null,
+      heroVideo: null,
       featured: ["post-office-building", "ten-mill-pond-lane", "magnolia-building"].includes(p[0])
     };
   }),
