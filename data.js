@@ -140,13 +140,13 @@ const AE = {
   },
   images,
   properties: [
-    ["magnolia-building", "635-651 Albany Avenue, Hartford, CT 06112", "Magnolia Building LLC", "635-651 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "15", 2000000, "100%", "Stabilized"],
+    ["magnolia-building", "635-651 Albany Avenue, Hartford, CT 06112", "Magnolia Building LLC", "635-651 Albany Avenue", "Hartford, CT", "Res/Com Mixed use", "15", 2000000, "100%", "Stabilized"],
     ["690-albany-avenue", "690 Albany Avenue, Hartford, CT 06112", "Ahmed Kavita Trustee", "690 Albany Avenue", "Hartford, CT", "Commercial · Retail Space", "3", 500000, "100%", "Stabilized"],
     ["895-albany-avenue", "895 Albany Avenue, Hartford, CT 06112", "919 Albany Avenue LLC", "895 Albany Avenue", "Hartford, CT", "Commercial · Retail Space", "1", 35000, "100%", "Stabilized"],
-    ["907-albany-avenue", "907 Albany Avenue, Hartford, CT 06112", "919 Albany Avenue LLC", "907 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "3", 400000, "100%", "Stabilized"],
+    ["907-albany-avenue", "907 Albany Avenue, Hartford, CT 06112", "919 Albany Avenue LLC", "907 Albany Avenue", "Hartford, CT", "Res/Com Mixed use", "3", 400000, "100%", "Stabilized"],
     ["919-albany-avenue", "919 Albany Avenue, Hartford, CT 06112", "919 Albany Avenue LLC", "919 Albany Avenue", "Hartford, CT", "Commercial · Retail Space", "3", 900000, "100%", "Stabilized"],
-    ["tinker-building", "1136-1150 Albany Avenue, Hartford, CT 06112", "Tinker building LLC", "1136-1150 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "10", 1500000, "100%", "Stabilized"],
-    ["weaver-building", "1154-1170 Albany Avenue, Hartford, CT 06112", "Weaver Building LLC", "1154-1170 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "24", 3000000, "100%", "Stabilized"],
+    ["tinker-building", "1136-1150 Albany Avenue, Hartford, CT 06112", "Tinker building LLC", "1136-1150 Albany Avenue", "Hartford, CT", "Res/Com Mixed use", "10", 1500000, "100%", "Stabilized"],
+    ["weaver-building", "1154-1170 Albany Avenue, Hartford, CT 06112", "Weaver Building LLC", "1154-1170 Albany Avenue", "Hartford, CT", "Res/Com Mixed use", "24", 3000000, "100%", "Stabilized"],
     ["winton-building", "45 Wintonbury Avenue, Bloomfield, CT 06002", "Winton building LLC", "45 Wintonbury Avenue", "Bloomfield, CT", "Commercial · Office Space", "29", 2000000, "100%", "Stabilized"],
     ["governors-building", "987-1003 Main Street, East Hartford, CT 06108", "Governor's Building LLC", "987-1003 Main Street", "East Hartford, CT", "Commercial · Retail Space", "12", 1400000, "100%", "Stabilized"],
     ["post-office-building", "641-651 Maple Avenue, Hartford, CT 06114", "Post Office Building LLC", "641-651 Maple Avenue", "Hartford, CT", "Commercial · Retail Space", "5", 2000000, "50%", "Stabilized"],
@@ -158,17 +158,17 @@ const AE = {
     ["20-highland-park", "20 Highland Park, Enfield, CT 06082", "20 Highland park LLC", "20 Highland Park", "Enfield, CT", "Residential", "1", 300000, "100%", "Stabilized"],
     ["258-farmington-avenue", "258 Farmington Avenue, Hartford, CT 06105", "258 Farmington Ave. LLC", "258 Farmington Avenue", "Hartford, CT", "Commercial · Retail Space", "1", 250000, "100%", "Stabilized"],
     ["455-farmington-avenue", "455 Farmington Avenue, Hartford, CT 06105", "Check cashing store LLC", "455 Farmington Avenue", "Hartford, CT", "Commercial · Retail Space", "1", 450000, "100%", "Stabilized"],
-    ["affleck-building", "741-749 Park Street, Hartford, CT 06106", "Affleck Building LLC", "741-749 Park Street", "Hartford, CT", "Res/Com Multi use", "12", 1400000, "100%", "Stabilized"],
-    ["eternity-building", "692-700 Park Street, Hartford, CT 06106", "Eternity Building LLC", "692-700 Park Street", "Hartford, CT", "Res/Com Multi use", "8", 800000, "100%", "Stabilized"],
-    ["uptown-building", "1468-1470 Albany Avenue, Hartford, CT 06112", "Uptown Building LLC", "1468-1470 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "8", 1200000, "100%", "Under renovation"],
-    ["696-714-albany-avenue", "696-714 Albany Avenue, Hartford, CT 06112", "Andaleeb Enterprises LLC", "696-714 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "11", 1500000, "100%", "Under renovation"],
-    ["restaurant-building", "1113-1115 Albany Avenue, Hartford, CT 06112", "Restaurant Building LLC", "1113-1115 Albany Avenue", "Hartford, CT", "Res/Com Multi use", "9", 500000, "100%", "Stabilized"],
+    ["affleck-building", "741-749 Park Street, Hartford, CT 06106", "Affleck Building LLC", "741-749 Park Street", "Hartford, CT", "Res/Com Mixed use", "12", 1400000, "100%", "Stabilized"],
+    ["eternity-building", "692-700 Park Street, Hartford, CT 06106", "Eternity Building LLC", "692-700 Park Street", "Hartford, CT", "Res/Com Mixed use", "8", 800000, "100%", "Stabilized"],
+    ["uptown-building", "1468-1470 Albany Avenue, Hartford, CT 06112", "Uptown Building LLC", "1468-1470 Albany Avenue", "Hartford, CT", "Res/Com Mixed use", "8", 1200000, "100%", "Under renovation"],
+    ["696-714-albany-avenue", "696-714 Albany Avenue, Hartford, CT 06112", "Andaleeb Enterprises LLC", "696-714 Albany Avenue", "Hartford, CT", "Res/Com Mixed use", "11", 1500000, "100%", "Under renovation"],
+    ["restaurant-building", "1113-1115 Albany Avenue, Hartford, CT 06112", "Restaurant Building LLC", "1113-1115 Albany Avenue", "Hartford, CT", "Res/Com Mixed use", "9", 500000, "100%", "Stabilized"],
     ["terry-square-plaza", "2739 Main Street, Hartford, CT", "Terry Square plaza", "2739 Main Street", "Hartford, CT", "Commercial · Retail Space", "7", 750000, "100%", "Stabilized"],
     ["merchant-association", "1108 Albany Avenue, Hartford, CT 06112", "The Merchant Association LLC", "1108 Albany Avenue", "Hartford, CT", "Commercial · Office Space", "1", 365000, "100%", "Stabilized"],
     ["885-albany-avenue", "885 Albany Avenue, Hartford, CT 06112", "885 Albany Avenue LLC", "885 Albany Avenue", "Hartford, CT", "Commercial · Retail Space", "1", 350000, "100%", "Stabilized"],
     ["ten-mill-pond-lane", "10 Mill Pond Lane, Simsbury, CT 06070", "Ten Mill Pond Lane LLC", "10 Mill Pond Lane", "Simsbury, CT", "Commercial · Office Space", "TBD", 0, "100%", "Closing in progress"]
   ].map((p, index) => {
-    const typeKey = p[5].includes("Residential") ? "residential" : p[5].includes("Multi") ? "mixed" : "commercial";
+    const typeKey = p[5].includes("Residential") ? "residential" : p[5].includes("Mixed") ? "mixed" : "commercial";
     const commercialType = typeKey === "commercial" ? (p[5].includes("Office") ? "office" : "retail") : null;
     const media = propertyMedia[p[0]];
     const imgSet = media

@@ -93,7 +93,7 @@ const layout = ({ title, active, body, from = "" }) => `<!doctype html>
   <link rel="preload" href="${asset("images/andaleeb-wordmark.png", from)}" as="image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="${from}styles.css?v=${styleVersion}">
 </head>
 <body>
@@ -135,7 +135,7 @@ const newsCard = (n, from = "", headingLevel = 3) => {
 </article>`;
 };
 const homeStats = `
-<section class="stats-band reveal">
+<section class="stats-band" aria-label="Portfolio overview">
   <div><strong>${AE.company.totalAssets}</strong><span>Properties</span></div>
   <div><strong>${AE.company.totalUnits.toLocaleString()}+</strong><span>Units / Commercial Spaces</span></div>
   <div><strong>N/A</strong><span>Total Square Footage</span></div>
@@ -163,7 +163,8 @@ write("index.html", layout({
   </button>
   <div class="hero-content">
     <h1 class="hero-logo"><img src="${asset("images/andaleeb-mark.png", "")}" width="879" height="720" alt="Andaleeb Enterprises"></h1>
-    <p>Real Estate Holding Company</p>
+    <h2 class="hero-headline">Building Value.<br>Strengthening Communities.</h2>
+    <p class="hero-support">Real estate investment and neighborhood revitalization.</p>
   </div>
 </section>
 ${homeStats}
